@@ -1,4 +1,11 @@
+
 body
 {
-	background-image: url("images/backf.jpg");
+padding-right: 0px !important
+}
+
+
+.modal-open
+{
+overflow-y:auto;
 }
