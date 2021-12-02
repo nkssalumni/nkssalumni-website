@@ -1,11 +1,55 @@
 
-body
-{
-padding-right: 0px !important
+ 
+button {
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 
 
-.modal-open
+ 
+.modal.active {
+  display: block;
+}
+ 
+
+
+ 
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid blue;
+  background: blue;
+  color: white;
+  padding: 20px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+ 
+.modal-body {
+  border: 1px solid blue;
+  justify-content: left;
+  padding: 0px;
+  background: white;
+}
+ 
+.modal-overlay {
+  margin: auto;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: black;
+    opacity: .4;
+    position: fixed;
+    z-index: 50;
+}
+.modal input[type=text]
 {
-overflow-y:auto;
+text-align: left;
+}
+.slideshade
+{
+	background-color: #03F;
+	opacity: 0.5;
 }
