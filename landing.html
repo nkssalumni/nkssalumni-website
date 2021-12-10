@@ -71,7 +71,7 @@
 
 
 <link rel="stylesheet" href="css/mystyle.css"/>
-
+<script src="js/AmosScript.js" ></script>
 
 
               
@@ -188,7 +188,7 @@
 
 
 
-   <a class="nav-link" href="about.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> About Us </a>  
+   <a  href="about.html" class="nav-link"  target="_self" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> About Us </a>  
 
 
 
@@ -204,7 +204,7 @@
 
 
 
-  <a class="nav-link" href="Contact.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Contact Us </a> </li> 
+  <a class="nav-link" href="Contact.html" taget="#self" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Contact Us </a> </li> 
 
 
 
@@ -1180,7 +1180,7 @@
 
 
 
-<a href="#" class="btn btn-success" > View</a>
+<a href="funpage.html" target="_self" class="btn btn-success" > View</a>
 
 
 
@@ -1608,7 +1608,7 @@
 
 
 
-<button class="btn  btn-lg btn-primary" type="button"style="background-color:#0275d8">View </button>
+<button class="btn  btn-lg btn-primary" type="button"style="background-color:#0275d8" data-bs-toggle="modal" data-bs-target="#portfolio">View </button>
 
 
 
@@ -1683,7 +1683,85 @@
 </section>
 
 
+<section>
 
+    <!-- Modal -->
+   <div class="modal fade" id="portfolio" tabindex="-1" aria-labelledby="portModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
+       <div class="modal-header">
+            <h2 class="modal-title display-6" id="loginModalLabel">Our Network</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+       <div class="modal-body">
+            <div class="container-fluid">
+              <div>
+
+<h3 class="display-3 text-center">Join Our Network </h3>
+<form>
+<div class="container">
+<label for="fname" class="form-text">First Name:</label>
+<input type="text" class="form-control" id="fname"/>
+<label for="sname" class="form-text">Second Name:</label>
+<input type="text" class="form-control" id="sname"/>
+<label for="pnum" class="form-text">Phone Number:</label>
+<input type="text" class="form-control" id="pnum"/
+>
+<label for="yr" class="form-text">Class of:</label>
+<input type="text" class="form-control" id="yr"/>
+
+
+<label for="email" class="form-text">Email:</label>
+<input type="text" class="form-control" id="email"/>
+
+<br />
+<p class="display-6"><small>Area of Expertise:</small></p>
+<div class="border border-secondary container">
+
+<br />
+  <label for="sc" >Choose your industry:</label>
+  <select id="sc" name="prof">
+  <option value="none">None</option>
+    <option value="Technology">Technology</option>
+    <option value="Science">Science</option>
+    <option value="Art">Art</option>
+    <option value="Bussiness">Bussiness</option>
+  </select>
+  
+  <br />
+  <br />
+  <label for="more" class="form-text">Tell us more about your expertise:</label>
+<textarea rows="5"class="form-control" id="sname"></textarea>
+
+<br/>
+<br />
+</div>
+<br />
+
+
+
+       <div class="modal-footer">
+           <button class="btn bg-secondary text-light"> Close </button>
+
+<button class="btn bg-primary text-light"> Submit </button>
+
+        </div>
+
+</form>
+
+        </div>
+</div>
+
+
+    </div>
+
+
+
+    </div>
+
+
+
+</section>
 
 
 
