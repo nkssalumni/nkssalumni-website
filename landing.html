@@ -1,4 +1,10 @@
-<!DOCTYPE html><head>
+﻿<!DOCTYPE html><head>
+
+
+
+
+
+
 
 
 
@@ -10,11 +16,25 @@
 
 
 
+
+
+
+
+
+
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 
 
+
+
+
+
 <!--content set -->
+
+
+
+
 
 
 
@@ -24,7 +44,17 @@
 
 
 
+
+
+
+
+
+
 <!-- CSS links -->
+
+
+
+
 
 
 
@@ -34,63 +64,50 @@
 
 
 
-<!-- the CDN link -->
-
-
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
-
-
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
 
 
 
 
 <!-- Other CSS Links -->
 
-<style>
-
-.navi
-{
-    display: flex;
-    justify-content: space-between;
-    background-color: blue
-    
-    
-}
 
 
 
 
 
 
-</style>
+
+
 
 
 
 
 <link rel="stylesheet" href="css/mystyle.css"/>
+
 <script src="js/AmosScript.js" ></script>
 
 
+
+
+
               
+
+
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"   integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
 
 
- 
 
               <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
 
-
-
- 
-
-
-
               </script>
+
+
+
+
+
+
 
 
 
@@ -100,11 +117,23 @@
 
 
 
+
+
+
+
 </head>
 
 
 
+
+
+
+
 <!--Body and Background Image -->
+
+
+
+
 
 
 
@@ -114,125 +143,92 @@
 
 
 
+
+
+
+
+
+
 <!--navigation panel -->
 
 
 
+
+
+
+
 <section>
 
 
+<nav class="navbar navbar-expand-lg bg-primary navbar-dark navbar-right ">
 
-<div>
+ <div class="container"> 
 
-
-
-<nav class="navbar navbar-expand-lg  navbar-dark navi bg-primary">
-
-
+ <img src="images/logo.png" width="20" class="img-set">
 
 <a class="navbar-brand" href="#">
 
-
-
-<img width="150" src="images/logo.png" alt="logo"" alt="logo"   />
-
-
-
 </a>
 
+ <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 
+<span class="navbar-toggler-icon"></span> </button> 
 
+<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
 
+ <ul class="navbar-nav text-light"> 
 
- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button> 
+     
 
+<li class="nav-item"> <a class="nav-link active" aria-current="page" href="#">Home</a> </li>
 
+ <li class="nav-item"> <a class="nav-link" href="About.html">About Us</a> </li> 
 
-<div class="collapse navbar-collapse" id="navbarSupportedContent">
+ <li class="nav-item"> <a class="nav-link" href="Contact.html">Contact Us</a> </li> 
 
+ <li class="nav-item"> <a class="nav-link" href="#">Our Activities</a> </li>
 
+</ul>
 
-<br />
+<ul class="navbar-nav">
 
+    <div>
 
+       
 
-<br />
+    <button class="btn btn-md text-light" style="background-color:#00BFFF;" type="button"data-bs-toggle="modal" data-bs-target="#reg"  > Register </button>
 
 
 
-<br />
 
 
 
-<br />
 
 
 
- <ul class="navbar-nav  mr-auto lead text-fark nav ">
 
 
 
-  <li class="nav-item dropdown"> 
 
 
 
-  <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false"> Home </a>
-
-
-
-  </li>
-
-
-
-   <li class="nav-item dropdown"> 
-
-
-
-   <a  href="about.html" class="nav-link"  target="_self" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> About Us </a>  
-
-
-
-   </li>
-
-
-
-
-
-
-
-  <li class="nav-item dropdown"> 
-
-
-
-  <a class="nav-link" href="Contact.html" taget="#self" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Contact Us </a> </li> 
-
-
-
-  <li class="nav-item dropdown"> <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Our Activities </a> 
-
-
-
-   </li> 
-
-
-
-   </ul> 
-
-
-
- </div>
-
-
-
-
-
-
-
- </nav>
-
-
+    <button class="btn btn-md text-light"  style="background-color:#00BFFF;" type="button"  data-bs-toggle="modal" data-bs-target="#loginModal">Login </button>
 
 </div>
+
+</ul>
+
+</div> 
+
+</div>
+
+
+
+</nav>
+
+
+
+
 
 
 
@@ -250,26 +246,37 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <br />
 
 
 
+
+
+
+
 <br />
 
 
 
+
+
+
+
 <br />
-
-
-
-
-
-
-
-<!--Register and Login Buttons-->
-
-
-
 
 
 
@@ -278,272 +285,123 @@
 
 
 
-<br />
+    <!-- Modal -->
+
+   <div class="modal fade" id="reg" tabindex="-1" aria-labelledby="portModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+
+        <div class="modal-content">
+
+       <div class="modal-header">
+
+            <h2 class="modal-title display-6" >Join Alumni Association </h2>
+
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+        </div>
+        
+
+       <div class="modal-body">
+
+            <div class="container-fluid">
+
+              <div>
 
 
 
-<br />
+<p class="lead">Your Details: </p>
 
-
+<form>
 
 <div class="container">
 
+<label for="fname" class="form-text">First Name:</label>
 
+<input type="text" class="form-control" id="fname"/>
 
-<button class="btn btn-md bg-primary text-light" type="button"data-bs-toggle="modal" data-bs-target="#regModal"  > Register </button>
+<label for="sname" class="form-text">Second Name:</label>
 
+<input type="text" class="form-control" id="sname"/>
 
+<label for="pnum" class="form-text">Phone Number:</label>
 
+<input type="text" class="form-control" id="pnum"/>
 
 
 
+<label for="email" class="form-text">Email:</label>
 
-<button class="btn btn-md bg-primary text-light" type="button"  data-bs-toggle="modal" data-bs-target="#loginModal">Login </button>
+<input type="text" class="form-control" id="email"/>
 
-
-
-</div>
-
-
-
-</section>
-
-<section>
-
-<div>
-
-
-
-<!-- Modal -->
-
-
-
- 
-
-    <div class="modal fade" id="regModal" tabindex="-1" aria-hidden="true" >
-
-
-
- 
-
-    <div class="modal-dialog modal-md modal-dialog-scrollable">
-
-
-
-         <div class="modal-content">
-
- 
-
-        <div class="modal-header">
-
-
-
-    <h2 class="modal-title" id="topModalLabel">JOIN THE ALUMNI ASSOCIATION </h2>
-
-
-
- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-
-        </div>
-
-
-
-        <div class="modal-body">
-
-
-
-           <div class="container-fluid">
-
-           <form >
-
-
-
-                <div class="row" >
-
- 
-
-                <div class="col-sm-6 input-group-sm">
-
-
-
-                <label class="form-label form-text" for="firstname">First Name:</label>
-
-                <input type="text" id="firstname" class="form-control"></input>
-
-
-
-                <label class="form-label form-text"  for="se ondname">Second Name:</label>
-
-
-
-                <input type="text" id="secondname" class="form-control"></input>
-
-
-
-                </div>
-
-
-
- 
-
-</div>
-
-        
-
-            <hr class="hrOriz">
-
-
-
- 
-
-            <!-- Model, years -->
-
-
-
-             <div class="row">
-
-                <div class="col-sm-6 ctr-mainFeat input-group-sm">
-
-
-
-                 <label class="form-text"  for="years">Year:</label>
-
+<label class="form-text"  for="years">Year:</label>
 
 
                  <select id="years" class="form-select">
 
-
-
                      <option selected>Choose...</option>
-
-
 
                      <option value="2008"> 2008 </option>
 
-
-
                      <option value="2009"> 2009 </option>
-
-
 
                     <option value="2010"> 2010 </option>
 
-
-
                     <option value="2011"> 2011 </option>
-
-
 
                    <option value="2012"> 2012 </option>
 
-
-
             <option value="2013"> 2013</option>  
-
-
 
        <option value="2014"> 2014 </option>         
 
-
-
 <option value="2015"> 2015</option>
-
-
 
 <option value="2016"> 2016 </option>
 
-
-
 <option value="2017"> 2017 </option>
-
-
 
 <option value="2018"> 2018 </option>
 
-
-
 <option value="2019"> 2019</option>
-
-
 
 <option value="2020"> 2020 </option>
 
-
-
 <option value="2021"> 2021</option>
 
-
-
 <option value="2022"> 2022 </option>
-
-
 
                 </select>
 
 
 
-                <label class="form-text" for="phone">Phone Number:</label>
-
-
-
-                <input type="text" id="phone" class="form-control">
-
-
-
-                <label class="form-text"  for="input">Email address:</label>
-
-
-
-                <input type="text" id="model" class="form-control">
-
-
-
-                
-
-                </div>
-
-
-
-                 </div>
-
-
-
-             <hr class="hrOriz">
-
- 
-
-                <p class="">Type of Membership:</p>
-
-
-
-                     <input class="form-check-input" type="checkbox" id="ch1">
-
-
-
-                    <label class="form-check-label me-4" for="ch1">Ordinary </label>
-
-
-
-                    <input class="form-check-input" type="checkbox" id="ch2">
-
-
-
-                    <label class="form-check-label " for="ch2">Executive </label>
-
 <br />
 
+
+  <br />
+
+  <br />
+
+
+
+ <hr class="hrOriz">
+
+
+
+                <p class="lead">Type of Membership:</p>
+
+<div class="form-check form-check-inline"> <input class="form-check-input" type="radio" id="inlineCheckbox1" value="option1"> <label class="form-check-label" for="inlineCheckbox1">Ordinary</label> </div> <div class="form-check form-check-inline"> <input class="form-check-input" type="radio" id="inlineCheckbox2" value="option2"> <label class="form-check-label" for="inlineCheckbox2">Executive</label> </div> <div class="form-check form-check-inline"> </div>
+
+<br />
+<br />
+<hr class="hrOriz">
 
 
                     <p> Note: For ordinary membership you will be required to pay a registration fee of Ksh 300 and yearly subscription of Ksh 1200.</p>
 
-
-
                     <br />
 
-
-
                     <p> For Exercutive Membership you will be required to pay a registration fee of ksh 1000 and a yearly subscription of Ksh 2500. </p>
-
 
 
                     </div>
@@ -551,41 +409,65 @@
                    </div>
 
 
+<br/>
 
-        <div class="modal-footer">
+<br />
 
+</div>
 
+<br />
 
-             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-
-
-
-            <button type="submit button" class="btn btn-primary" form="newInvData">Pay & Register</button>
-
-
-
-        </div>
-
-        
-
-        </div>
+</div>
 
 
 
-     </div>
 
-    </div>
 
-    </div>
+       <div class="modal-footer">
+
+           <button class="btn bg-secondary text-light"> Close </button>
+
+
+
+<button class="btn bg-primary text-light"> Submit </button>
+
+
+
+        </div>
+
+
+
+</form>
+
+
+
+        </div>
+
+</div>
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
 
 
 
 </section>
 
-
-
 <section>
-
 <div>
 
     <!-- Modal -->
@@ -596,7 +478,7 @@
 
 
 
-    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+    <div class="modal-dialog modal-md">
 
 
 
@@ -628,17 +510,9 @@
 
 
 
-               <form id="reg">
+               <form id="log">
 
-   <div class="row">
-
-
-
-                <div class="col-sm-6 input-group-sm" >
-
-
-
-                <label for="Phone">Phone No:</label>
+                   <label for="Phone">Phone No:</label>
 
 
 
@@ -646,42 +520,18 @@
 
 
 
-                </div>
-
-
-
-                <div class="col-sm-6 input-group-sm">
-
-
-
                 <label for="password">password:</label>
 
 
 
-                <input type="password" id="password" class="form-control"></input>
+                <input type="password" id="saelJobNr" class="form-control"></input>
 
 
-
-             </div>
-
-
-
-                 <div class="row">
-
-
-
-                <div class="col-sm-6 ctr-elcBrd">
-
+</form>
+   
 
 
                 
-
-                    </div>
-
-
-
-                </div>
-
 
 
 
@@ -694,31 +544,32 @@
 
 
 
-            <button type="submit" class="btn btn-primary" form="reg">Save changes</button>
+            <button type="submit" class="btn btn-primary" form="reg">Login</button>
 
 
 
         </div>
 
-        </form>
+      
 
 
 
-        </div>
-
-
-
-    </div>
-
-
-
-    </div>
-
-
-
-</div>
 
 </section>
+
+
+
+
+
+
+
+
+                
+
+
+
+
+
 
 
 
@@ -726,31 +577,31 @@
 
 
 
+
+
+
+
 <section>
+
+
+
+
 
 
 
  <div class="carousel slide" data-ride="carousel" data-interval="10000" data-pause="hover">
 
 
-
   <div class="carousel-inner"> 
-
-
 
   <div class="carousel-item active"> 
 
 
-
   <img src="images/alu.png" class="d-block w-100" alt="alumni pictures"> 
-
-
 
   <div class="carousel-caption "> <h3 class="slideshade">Did you go to Nkaimurunya Secondary School?</h3>
 
 <br />
-
-
 
   <a class="btn btn-lg bg-primary Lead text-light " data-bs-toggle="modal" data-bs-target="#regModal"  href="">Join Us</a>
 
@@ -762,23 +613,13 @@
 
   </div>
 
-
-
   <div class="carousel-item">
 
-
-
-  <img src="images/network.png"" class="d-block w-100" alt="...">
-
-
+  <img src="images/network.png" class="d-block w-100" alt="...">
 
   <div class="carousel-caption">
 
-
-
   <h2 class="slideshade">Let's Network</h2>
-
-
 
   <h3 class="slideshade">We have alot of professionals, bussinesspersons and talents among us, who give a diverse and rich pool for begining your network to future fruitful results. </h3>
 
@@ -793,9 +634,6 @@
    </div>
 
 
-
-
-
  <div class="carousel-item"> <img src="images/funmoments.png" class="d-block w-100"> 
 
 <div class="carousel-caption"> <h3 class="slideshade">Let's catch up and interact socially with Other Alumni</h3>
@@ -806,38 +644,26 @@
 
  <a class="btn btn-lg bg-primary Lead text-light " data-bs-toggle="modal" data-bs-target="#regModal"  href="">Join Us</a>
 
+
+
  <br />
-
-
 
 <br />
 
- 
 
 
 
-
-
-
-
- </div> </div> </div> 
-
-
-
-
-
+ </div> 
+ </div>
+  </div> 
+  </div>
 
 
  <br />
 
-
-
-
-
-
-
  <br />
 
+</section>
 
 
 
@@ -845,22 +671,7 @@
 
 
 
-
-
-
-</sections
-
-
-
-><!--this section contain the icons -->
-
-
-
-
-
-
-
-<section>
+<!--this section contain the icons -->
 
 
 
@@ -876,577 +687,100 @@
 
 
 
-<div class=" col d-flex justify-content-center">
+<section Class="cardi">
 
 
+<div class="align-items-center">
 
 
-
-
-
-
-
-
-
-
-
-
-
-<div class="container  align-items-center">
-
-
-
-
-
-
-
-
-
-
-
-
-
+<div class="cardi">
 
 
 <div class="row text-center">
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <div class="col-sm-3" >
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="card align-items-center shadow p-3 mb-5 bg-white rounded profile-card" style="opacity: .6;">
-
-
-
-
-
-
-
-
-
-
-
-
-
+<div class="card align-items-center shadow p-3 mb-5 bg-white rounded profile-card" style="opacity: 2;">
 
 
 <img class="card-img-top img-fluid w-5 align-items-center " src="images/classrepsw.png" style="width: 50%;" >
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <div class="card-body text-center">
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <h5 class="card-title">Class Reps</h5>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p class="card-text lead"> Contact Class Rep</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <a href="#" class="btn btn-primary"> Contact </a>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+</div>
 
 </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <div class="col-sm-3">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="card w-60 align-items-center shadow p-3 mb-5 bg-white rounded profile-card" style="opacity: .6;">
-
-
-
-
-
-
-
-
-
-
-
-
+<div class="card w-60 align-items-center shadow p-3 mb-5 bg-white rounded profile-card" style="opacity: 2;">
 
 
 
 <img class="card-img-top img-fluid w-5 " src="images/funtimes.png" style="width: 50%;" >
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 <div class="card-body text-center">
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <h5 class="card-title">Fun Moments</h5>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p class="card-text lead"><small>View Our Pictures</small></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <a href="funpage.html" target="_self" class="btn btn-success" > View</a>
 
 
-
-
-
-
-
-
-
-
-
-
-
+</div>
 
 
 </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <div class="col-sm-3">
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="card w-60 align-items-center shadow p-3 mb-5 bg-white rounded profile-card " style="opacity: .6;">
-
-
-
-
-
-
-
-
-
-
-
-
-
+<div class="card w-60 align-items-center shadow p-3 mb-5 bg-white rounded profile-card " style="opacity: 2;">
 
 
 <img class="card-img-top img-fluid w-5" src="images/schedule.png" style="width: 50%;" >
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <div class="card-body text-center">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <h5 class="card-title">Our Schedule</h5>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p class="card-text lead">  See Our Schedule</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <button type="button" class="btn btn-primary animatebutton" id="animatebutton"> View </button>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+</div>
 
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+</div>
 
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- this contain the portfolio--->
-
-
-
-
-
-
 
 </section>
 
@@ -1464,7 +798,39 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1481,6 +847,22 @@
 
 
 <div class="container">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1512,7 +894,39 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1544,7 +958,39 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1572,7 +1018,23 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 <br />
+
+
+
+
 
 
 
@@ -1584,7 +1046,23 @@
 
 
 
+
+
+
+
+
+
+
+
 <p class="display-4"><strong>Here!</strong></p>
+
+
+
+
+
+
+
+
 
 
 
@@ -1608,6 +1086,22 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <button class="btn  btn-lg btn-primary" type="button"style="background-color:#0275d8" data-bs-toggle="modal" data-bs-target="#portfolio">View </button>
 
 
@@ -1616,6 +1110,14 @@
 
 
 
+
+
+
+
+
+
+
+
 <br />
 
 
@@ -1632,23 +1134,7 @@
 
 
 
-</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div>
 
 
 
@@ -1665,6 +1151,86 @@
 
 
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1681,83 +1247,164 @@
 
 
 </section>
+
+
+
 
 
 <section>
 
+
+
     <!-- Modal -->
+
    <div class="modal fade" id="portfolio" tabindex="-1" aria-labelledby="portModalLabel" aria-hidden="true">
+
     <div class="modal-dialog modal-xl modal-dialog-scrollable">
+
         <div class="modal-content">
+
        <div class="modal-header">
+
             <h2 class="modal-title display-6" id="loginModalLabel">Our Network</h2>
+
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
         </div>
+
        <div class="modal-body">
+
             <div class="container-fluid">
+
               <div>
 
+
+
 <h3 class="display-3 text-center">Join Our Network </h3>
+
 <form>
+
 <div class="container">
+
 <label for="fname" class="form-text">First Name:</label>
+
 <input type="text" class="form-control" id="fname"/>
+
 <label for="sname" class="form-text">Second Name:</label>
+
 <input type="text" class="form-control" id="sname"/>
+
 <label for="pnum" class="form-text">Phone Number:</label>
+
 <input type="text" class="form-control" id="pnum"/
+
 >
+
 <label for="yr" class="form-text">Class of:</label>
+
 <input type="text" class="form-control" id="yr"/>
 
 
+
+
+
 <label for="email" class="form-text">Email:</label>
+
 <input type="text" class="form-control" id="email"/>
 
+
+
 <br />
+
 <p class="display-6"><small>Area of Expertise:</small></p>
+
 <div class="border border-secondary container">
 
+
+
 <br />
+
   <label for="sc" >Choose your industry:</label>
+
   <select id="sc" name="prof">
+
   <option value="none">None</option>
+
     <option value="Technology">Technology</option>
+
     <option value="Science">Science</option>
+
     <option value="Art">Art</option>
+
     <option value="Bussiness">Bussiness</option>
+
   </select>
+
   
+
   <br />
+
   <br />
+
   <label for="more" class="form-text">Tell us more about your expertise:</label>
+
 <textarea rows="5"class="form-control" id="sname"></textarea>
 
+
+
 <br/>
+
 <br />
+
 </div>
+
 <br />
+
+
+
+
 
 
 
        <div class="modal-footer">
+
            <button class="btn bg-secondary text-light"> Close </button>
+
+
 
 <button class="btn bg-primary text-light"> Submit </button>
 
+
+
         </div>
+
+
 
 </form>
 
+
+
         </div>
+
 </div>
 
 
-    </div>
 
 
 
     </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
 
 
 
@@ -1774,7 +1421,44 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 <br />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1806,7 +1490,31 @@
 
 
 
+
+
+
+
+
+
+
+
 <section class="bg-primary">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1838,7 +1546,39 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="d-sm-flex  align-items-center justify-content-between">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1870,7 +1610,31 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <p class="display-6"><strong><br/>Year Book<br />
+
+
+
+
+
+
+
+
 
 
 
@@ -1886,6 +1650,14 @@ Pictures of Alumni<br /> From all Years.</strong></p>
 
 
 
+
+
+
+
+
+
+
+
 <p class="lead"><small>See the faces of Alumni, <br /> from the Pioneers to date,<br /> update
 
 
@@ -1894,7 +1666,31 @@ Pictures of Alumni<br /> From all Years.</strong></p>
 
 
 
+
+
+
+
+
+
+
+
 your own picture <br /> and your year of completion.</small></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1926,6 +1722,22 @@ your own picture <br /> and your year of completion.</small></p>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <br />
 
 
@@ -1942,7 +1754,39 @@ your own picture <br /> and your year of completion.</small></p>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <br />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1959,6 +1803,22 @@ your own picture <br /> and your year of completion.</small></p>
 
 
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1990,6 +1850,22 @@ your own picture <br /> and your year of completion.</small></p>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
 
 
@@ -2006,7 +1882,39 @@ your own picture <br /> and your year of completion.</small></p>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2038,7 +1946,39 @@ your own picture <br /> and your year of completion.</small></p>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <br />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2062,7 +2002,31 @@ your own picture <br /> and your year of completion.</small></p>
 
 
 
+
+
+
+
+
+
+
+
 <section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2094,6 +2058,22 @@ your own picture <br /> and your year of completion.</small></p>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  <div class="row justify-content-center"> 
 
 
@@ -2110,7 +2090,39 @@ your own picture <br /> and your year of completion.</small></p>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  <div class="text-center">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2146,7 +2158,39 @@ your own picture <br /> and your year of completion.</small></p>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div clas= "justify-content-center">
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2190,7 +2234,55 @@ your own picture <br /> and your year of completion.</small></p>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <li class="nav-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2222,7 +2314,39 @@ your own picture <br /> and your year of completion.</small></p>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <li class="nav-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2254,7 +2378,39 @@ your own picture <br /> and your year of completion.</small></p>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <li class="nav-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2286,7 +2442,39 @@ your own picture <br /> and your year of completion.</small></p>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <li class="nav-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2318,11 +2506,43 @@ your own picture <br /> and your year of completion.</small></p>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </ul>
 
 
 
+
+
+
+
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2342,11 +2562,27 @@ your own picture <br /> and your year of completion.</small></p>
 
 
 
+
+
+
+
+
+
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 
 
+
+
+
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> <script src="script.js"></script>
+
+
+
+
 
 
 
@@ -2358,11 +2594,39 @@ your own picture <br /> and your year of completion.</small></p>
 
 
 
+
+
+
+
+
+
+
+
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 
 
+
+
+
+
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2386,7 +2650,47 @@ your own picture <br /> and your year of completion.</small></p>
 
 
 
+
+
+
+
+
+
+
+
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,4 +1,14 @@
+@media only screen and (min-device-width : 641px){.cardi
+ { 
+ margin-left: 11%; }}
+ 
 
+.img-set {
+    height: auto;
+    width: auto;
+    max-height: 72px;
+    max-width: 250px;
+}
  
 button {
   padding: 5px 10px;
