@@ -60,7 +60,7 @@ text-align: left;
 }
 .slideshade
 {
-	background-color: #03F;
+	background-color: #03f;
 	opacity: 0.5;
 }
 .profile-card {
@@ -73,7 +73,7 @@ text-align: left;
   justify-content: space-between;
   padding-top: 1rem;
   background-color: white;
-  box-shadow: 0px 3px 10px rgba(0,0,0,0.3);
+  box-shadow: 0px 3px 10px rgba(0,0,0,.3);
   transition: all 0.3s ease;
 }
 
