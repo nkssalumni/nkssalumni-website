@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: “Raleway”, sans-serif;
+  font-family: "“Raleway”", sans-serif;
 }
 
 .body {
@@ -12,7 +12,6 @@
 }
 
 .cards {
- 
   margin: auto;
   width: 70vw;
   max-width: 800px;
@@ -45,8 +44,8 @@
   justify-content: space-between;
   padding-top: 1rem;
   background-color: white;
-  box-shadow: 0px 3px 10px rgba(0,0,0,.3);
-  transition: all 0.3s ease;
+  box-shadow: 0px 3px 10px #808080;
+  transition: all .3s ease;
 }
 
 .profile-card:hover {
@@ -56,7 +55,7 @@
 
 .profile-picture {
   border-radius: 50%;
-  box-shadow: 0px 0px 5px rgba(0,0,0,.5);
+  box-shadow: 0px 0px 5px #808080;
 }
 
 .profile-name {
@@ -64,7 +63,7 @@
   font-size: 18px;
 }
 
-.profile-work{
+.profile-work {
   display: flex;
   width: 100%;
   height: 35%;
@@ -73,10 +72,11 @@
   background-color: #f3f2f2;
 }
 
-.profile-projects, .profile-prototypes {
-    display: flex;
-    flex-flow: column;
-    text-align: center;
+.profile-projects, 
+.profile-prototypes {
+	display: flex; 
+	 flex-flow: column;
+	 text-align: center;
 }
 
 strong {

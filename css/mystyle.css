@@ -1,83 +1,87 @@
-@media only screen and (min-device-width : 641px){.cardi
- { 
- margin-left: 11%; }}
+@media only screen and (min-device-width: 641px) {
+	.cardi {
+	 margin-left: 11%; 
+ }
+ }
  
 
 .img-set {
-    height: auto;
-    width: auto;
-    max-height: 72px;
-    max-width: 250px;
+	height: auto;
+	width: auto;
+	max-height: 72px;
+	max-width: 250px;
 }
- 
+
 button {
-  padding: 5px 10px;
-  border-radius: 5px;
+	padding: 5px 10px;
+	border-radius: 5px;
 }
 
 
  
 .modal.active {
-  display: block;
+	display: block;
 }
  
 
 
  
 .modal-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border: 1px solid blue;
-  background: blue;
-  color: white;
-  padding: 20px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border: 1px solid blue;
+	background: blue;
+	color: white;
+	padding: 20px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
 }
  
 .modal-body {
-  border: 1px solid blue;
-  justify-content: left;
-  padding: 0px;
-  background: white;
+	border: 1px solid blue;
+	justify-content: left;
+	padding: 0px;
+	background: white;
 }
  
 .modal-overlay {
-  margin: auto;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background: black;
-    opacity: .4;
-    position: fixed;
-    z-index: 50;
+	margin: auto;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background: black;
+	opacity: .4;
+	position: fixed;
+	z-index: 50;
 }
-.modal input[type=text]
-{
-text-align: left;
+
+.modal input[type=text] {
+	text-align: left;
 }
-.slideshade
-{
+
+.slideshade {
 	background-color: #03f;
 	opacity: 0.5;
 }
+
 .profile-card {
-  min-width: 200px;
-  position: relative;
-  min-height: 200px;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 1rem;
-  background-color: white;
-  box-shadow: 0px 3px 10px rgba(0,0,0,.3);
-  transition: all 0.3s ease;
+	min-width: 200px;
+	position: relative;
+	min-height: 200px;
+	display: flex;
+	background: #808080;	
+	flex-flow: column;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 1rem;
+	background-color: white;
+	box-shadow: 0px 3px 10px ;
+	transition: all 0.3s ease;
 }
 
 .profile-card:hover {
-  transform: translateY(-3%);
-  cursor: pointer;
+	transform: translateY(-3%);
+	cursor: pointer;
 }
