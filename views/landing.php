@@ -24,6 +24,9 @@
     <!--animate-->
     <link rel="stylesheet" type="text/css" href="assets/3rdparties/animate/animate.css">
 
+    <!--International CODE-->
+    <link rel="stylesheet" href="assets/3rdparties/build/css/intlTelInput.css">
+
     <!--custom css -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
@@ -37,12 +40,11 @@
   <section>
     <nav class="navbar navbar-expand-lg bg-primary navbar-dark navbar-right ">
       <div class="container"> 
-        <img src="assets/images/logo.png" width="20" class="img-set">
-        <a class="navbar-brand" href="/"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="/"><img src="assets/images/logo.png" width="20" class="img-set"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span> </button> 
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav text-light"> 
+        <div class="collapse navbar-collapse " id="navbarNav">
+          <ul class="navbar-nav ml-auto text-light"> 
             <li class="nav-item"> <a class="nav-link active" aria-current="page" href="/">Home</a> </li>
             <li class="nav-item"> <a class="nav-link" href="/about">About Us</a> </li> 
             <li class="nav-item"> <a class="nav-link" href="/contact-us">Contact Us</a> </li> 
@@ -50,8 +52,8 @@
           </ul>
           <ul class="navbar-nav">
             <div>
-              <button class="btn btn-md text-light" style="background-color:#00BFFF;" type="button"data-bs-toggle="modal" data-bs-target="#regModal"  > Register </button>
-              <button class="btn btn-md text-light"  style="background-color:#00BFFF;" type="button"  data-bs-toggle="modal" data-bs-target="#loginModal">Login </button>
+              <button class="btn btn-md text-light" style="background-color:#00BFFF;" type="button" data-toggle="modal" data-target="#regModal"  > Register </button>
+              <button class="btn btn-md text-light"  style="background-color:#00BFFF;" type="button"  data-toggle="modal" data-target="#loginModal">Login </button>
             </div>
           </ul>
         </div> 
@@ -66,23 +68,32 @@
         <div class="modal-content">
           <div class="modal-header">
             <h2 class="modal-title display-6" >Join Alumni Association </h2>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div>        
           <div class="modal-body">
             <div class="container-fluid">  
               <p class="lead">Your Details: </p>
-              <form>
+              <form method="post" >
+                <?php echo $message;?>
                 <div class="container">
-                <label for="fname" class="form-text">First Name:</label>
-                <input type="text" class="form-control" id="fname"/>
-                <label for="sname" class="form-text">Second Name:</label>
-                <input type="text" class="form-control" id="sname"/>
-                <label for="pnum" class="form-text">Phone Number:</label>
-                <input type="text" class="form-control" id="pnum"/>
+                <div id = "response"></div>
+                <label for="firstname" class="form-text">First Name:</label>
+                <input type="text" class="form-control" id="firstname"/>
+                <label for="secondname" class="form-text">Second Name:</label>
+                <input type="text" class="form-control" id="secondname"/>
+                <label for="phonenumber" class="form-text">Phone Number:</label>
+                <input type="tel" name="phonenumber" class="form-control" id="phonenumber"/>
                 <label for="email" class="form-text">Email:</label>
                 <input type="text" class="form-control" id="email"/>
+                <label for="password" class="form-text">Password:</label>
+                <input type="password" class="form-control" id="password"/>
+                <span toggle="#confirmPassword-field" id="toggle-confirmPassword" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                <label for="confirmPassword" class="form-text">Confirm Password:</label>
+                <input type="password" class="form-control" id="confirmPassword"/>
                 <label class="form-text"  for="years">Year:</label>
-                <select id="years" class="form-select">
+                <select id="years" class="custom-select">
                   <option selected>Choose...</option>
                   <option value="2008"> 2008 </option>
                   <option value="2009"> 2009 </option>
@@ -103,14 +114,16 @@
                 <br/><br/><br/>
                 <hr class="hrOriz">
                 <p class="lead">Type of Membership:</p>
-                <div class="form-check form-check-inline"> 
-                  <input class="form-check-input" type="radio" id="inlineCheckbox1" value="option1"> 
-                  <label class="form-check-label" for="inlineCheckbox1">Ordinary</label> 
-                </div> 
-                <div class="form-check form-check-inline"> 
-                  <input class="form-check-input" type="radio" id="inlineCheckbox2" value="option2"> 
-                  <label class="form-check-label" for="inlineCheckbox2">Executive</label> 
-                </div> 
+                <div class= "membership">
+                  <div class="form-check form-check-inline"> 
+                    <input class="form-check-input" name = "membership" type="radio" id="inlineCheckbox1" value="ordinary"> 
+                    <label class="form-check-label" for="inlineCheckbox1">Ordinary</label> 
+                  </div> 
+                  <div class="form-check form-check-inline"> 
+                    <input class="form-check-input" name = "membership" type="radio" id="inlineCheckbox2" value="executive"> 
+                    <label class="form-check-label" for="inlineCheckbox2">Executive</label> 
+                  </div> 
+                </div>
                 <br /><br />
                 <hr class="hrOriz">
                 <p> Note: For ordinary membership you will be required to pay a registration fee of Ksh 300 and yearly subscription of Ksh 1200.</p>
@@ -123,7 +136,7 @@
             </div>
             <div class="modal-footer">
               <button class="btn bg-secondary text-light"> Close </button>
-              <button class="btn bg-primary text-light"> Submit </button>
+              <button class="btn bg-primary text-light" id = "register-form"> Submit </button>
             </div>
           </form>
         </div>
@@ -138,19 +151,24 @@
         <div class="modal-content">
           <div class="modal-header">
             <h2 class="modal-title" id="loginModalLabel">LOGIN</h2>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
           </div>
           <div class="modal-body">
             <div class="container-fluid">
               <form id="log">
-                <label for="Phone">Phone No:</label>
-                <input type="text" id="phone" class="form-control">
+                <div id = "op"></div>
+                <label for="Phone" class = "mt-3">Email:</label>
+                <input type="text" id="login_email" class="form-control">
                 <label for="password">password:</label>
-                <input type="password" id="saelJobNr" class="form-control">
-              </form>                  
+                <input type="password" id="login_password" class="form-control">
+              </form>
+              <div class="form-group text-center mt-3">
+                  <a class="explore-text-sm" href="/forgot-password"> Forgot password?</a> 
+              </div>                  
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary" form="reg">Login</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id = "login-form">Login</button>
               </div>
             </div>
           </div>
@@ -167,7 +185,7 @@
           <img src="assets/images/alu.png" class="d-block w-100" alt="alumni pictures"> 
           <div class="carousel-caption "> <h3 class="slideshade">Did you go to Nkaimurunya Secondary School?</h3>
             <br />
-            <a class="btn btn-lg bg-primary Lead text-light " data-bs-toggle="modal" data-bs-target="#regModal"  href="">Join Us</a>
+            <a class="btn btn-lg bg-primary Lead text-light " data-toggle="modal" data-target="#regModal"  href="">Join Us</a>
             <br />
             <br />
           </div> 
@@ -178,7 +196,7 @@
             <h2 class="slideshade">Let's Network</h2>
             <h3 class="slideshade">We have alot of professionals, bussinesspersons and talents among us, who give a diverse and rich pool for begining your network to future fruitful results. </h3>
             <br />
-            <a class="btn btn-lg bg-primary Lead text-light " data-bs-toggle="modal" data-bs-target="#regModal"  href="">Join Us</a>
+            <a class="btn btn-lg bg-primary Lead text-light " data-toggle="modal" data-target="#regModal"  href="">Join Us</a>
             <br/>
           </div>
         </div>
@@ -186,7 +204,7 @@
           <div class="carousel-caption"> <h3 class="slideshade">Let's catch up and interact socially with Other Alumni</h3>
             <br />
             <br />
-            <a class="btn btn-lg bg-primary Lead text-light " data-bs-toggle="modal" data-bs-target="#regModal"  href="">Join Us</a>
+            <a class="btn btn-lg bg-primary Lead text-light " data-toggle="modal" data-target="#regModal"  href="">Join Us</a>
             <br />
             <br />
           </div> 
@@ -248,7 +266,7 @@
           <p class="display-5">Post Your Portfolio.</p>
           <p class="display-4"><strong>Here!</strong></p>
           <p class="lead my-4"><small>If your looking for a job, <br />NKSSA has a vast network <br /> of various professsion <br />and there is a great chance <br /> that once you join your employer <br />can be a member or you can be reffered.</small></p>
-          <button class="btn  btn-lg btn-primary" type="button"style="background-color:#0275d8" data-bs-toggle="modal" data-bs-target="#portfolio">View </button>
+          <button class="btn  btn-lg btn-primary" type="button"style="background-color:#0275d8" data-toggle="modal" data-target="#portfolio">View </button>
           <br />
         </div>
       </div>
@@ -262,7 +280,7 @@
           <div class="modal-content">
         <div class="modal-header">
               <h2 class="modal-title display-6" id="loginModalLabel">Our Network</h2>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
           </div>
         <div class="modal-body">
             <div class="container-fluid">
@@ -271,15 +289,15 @@
                 <form>
                   <div class="container">
                     <label for="fname" class="form-text">First Name:</label>
-                    <input type="text" class="form-control" id="fname"/>
+                    <input type="text" class="form-control" id="pfirstname"/>
                     <label for="sname" class="form-text">Second Name:</label>
-                    <input type="text" class="form-control" id="sname"/>
+                    <input type="text" class="form-control" id="psecondname"/>
                     <label for="pnum" class="form-text">Phone Number:</label>
-                    <input type="text" class="form-control" id="pnum"/>
+                    <input type="text" class="form-control" id="pphonenumber"/>
                     <label for="yr" class="form-text">Class of:</label>
-                    <input type="text" class="form-control" id="yr"/>
+                    <input type="text" class="form-control" id="pyr"/>
                     <label for="email" class="form-text">Email:</label>
-                    <input type="text" class="form-control" id="email"/>
+                    <input type="text" class="form-control" id="pemail"/>
                     <br />
                     <p class="display-6"><small>Area of Expertise:</small></p>
                     <div class="border border-secondary container">
@@ -302,7 +320,7 @@
                     <br />
                     <div class="modal-footer">
                       <button class="btn bg-secondary text-light"> Close </button>
-                      <button class="btn bg-primary text-light"> Submit </button>
+                      <button class="btn bg-primary text-light" type = "button"> Submit </button>
                     </div>
                   </div>
                 </form>
@@ -351,6 +369,209 @@
       </div>
     </div>
   </section>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="assets/3rdparties/jquery/jquery.js"></script>
+  <script src = "assets/3rdparties/bootstrap/js/bootstrap.js"></script>
+  <script src="assets/3rdparties/build/js/intlTelInput-jquery.js"></script>
+
+  <script>
+
+    $("#phonenumber").intlTelInput({
+      initialCountry: "auto",
+        geoIpLookup: function(callback) {
+          $.get('https://ipinfo.io?token=2433f368462b55', function() {}, "jsonp").always(function(resp) {
+            var countryCode = (resp && resp.country) ? resp.country : "";
+            callback(countryCode);
+          });
+        }
+    });
+
+
+    $("#toggle-password").click(function() {
+
+      $(this).toggleClass("fa-eye fa-eye-slash");
+      var input = $("#password").attr("type");
+      if (input == "password") {
+        $("#password").attr("type", "text");
+      } else {
+        $("#password").attr("type", "password");
+      }
+      });
+      $("#toggle-confirmPassword").click(function() {
+
+      $(this).toggleClass("fa-eye fa-eye-slash");
+      var input = $("#confirmPassword").attr("type");
+      if (input == "password") {
+        $("#confirmPassword").attr("type", "text");
+      } else {
+        $("#confirmPassword").attr("type", "password");
+      }
+      });
+
+
+     function clear_register_field() {
+          $("#firstname").val('');
+          $("#secondname").val('');
+          $("#phonenumber").val('');
+          $("#email").val('');
+          $("#password").val('');
+          $("#confirmPassword").val('');
+      }
+
+
+      function register_submit(){
+        
+        // pull in values/variables
+        var firstname = $("#firstname").val();
+        var csrf_token = $("#csrf").val();
+        var secondname = $("#secondname").val();
+        var phonenumber = $("#phonenumber").val();
+        var email = $("#email").val();
+        var password = $("#password").val();
+        var years = $("#years").val();
+        var confirmPassword = $("#confirmPassword").val();
+        var membership = $("input[name='membership']:checked").val();
+    
+     
+        //console.log(background);
+        //check if any of the variable is empty
+        if (!firstname || !secondname  || !phonenumber || !email || !password || !confirmPassword || !years || !membership) {
+          $('#response').html('<div class="alert alert-danger animated bounce" role="alert"><i class="fa fa-warning animated swing infinite"></i> Please fill out all sections</div>');
+        } 
+        else {
+
+            if (password != confirmPassword) {
+
+                $('#response').html('<div class="alert alert-danger animated bounce" role="alert"><i class="fa fa-warning animated swing infinite"></i> Passwords do not match</div>');
+
+              } else {
+
+                if (Number(password.length) < 8){
+
+                  $('#response').html('<div class="alert alert-danger animated bounce" role="alert"><i class="fa fa-warning animated swing infinite"></i> Password Must be atleast 8 characters</div>');
+
+                }else {
+
+          
+                   
+                    $('#response').html('');
+                    var regData = {
+                          csrf_token:csrf_token,
+                          firstname:firstname,
+                          secondname:secondname,
+                          email:email,
+                          phonenumber:phonenumber,
+                          password:password,
+                          confirmPassword:confirmPassword,
+                          years:years,
+                          membership:membership      
+                        };
+                    //console.log(regData);
+                    $.ajax({  
+                        url:"/register",  
+                        method:"POST",  
+                        data: regData,
+                        dataType: 'text', 
+                        success:function(data)  
+                        {                              
+                            //console.log(data);
+                            var response = JSON.parse(data);
+                            console.log(response);
+                            if (response.message == 'success') {
+                              var link = '/resend-activation-link?email='+email;
+                              $('#response').html('<div class="alert alert-success animated bounce" role="alert"><i class="fa fa-check animated swing infinite"></i>Sign Up Success. Check your email to verify your account </div><div>Did not get email?  Click <a href = "'+link+'">here to resend email</a></div>');
+                              
+                              // clear the fields
+                              clear_register_field();
+
+                            } else {
+                              $('#response').html('<div class="alert alert-danger animated bounce" role="alert"><i class="fa fa-warning animated swing infinite"></i> '+response.message +'</div>');
+                              
+                            }
+                            
+                        },
+                        error: function (jqXhr, textStatus, errorThrown) {
+                            
+                            $('#response').html('<hr><div class="alert alert-danger animated bounce" role="alert"><i class="fa fa-warning animated swing infinite"></i> Contact system Admin. System error</div>');
+                            //console.log(jqXhr + " || " + textStatus + " || " + errorThrown);
+                        } 
+                    });
+
+                }
+
+              } 
+          }
+        }
+
+        function login_submit(){
+  
+          // pull in values/variables
+          var email = $("#login_email").val();
+          var password = $("#login_password").val();
+          var csrf_token = $("#csrf").val();
+          var returnurl = $("#returnurl").val();
+        
+
+          //check if any of the variable is empty
+          if (!email || !password) {
+            $('#op').html('<div class="alert alert-danger animated bounce mt-4" role="alert"><i class="fa fa-warning animated swing infinite"></i> Please fill out all sections</div>');
+          } 
+          else {
+
+            $('#op').html('');
+
+            $.ajax({  
+                url:"/login",  
+                method:"POST",  
+                data:{
+                  csrf_token:csrf_token,
+                  email:email,
+                  password:password,
+                  returnurl:returnurl
+
+                },
+                dataType: 'text', 
+                success:function(data)  
+                {  
+                    //console.log(data);
+                    var response = JSON.parse(data);
+                    //console.log(response);
+                    if (response.message !== 'success') {
+                    
+                      $('#op').html('<div class="alert alert-danger animated bounce mt-4" role="alert"><i class="fa fa-warning animated swing infinite"></i> ' + response.message +'</div>');
+                                  
+                      // clear the fields
+
+                    }else if(response.message === 'success'){
+                     
+                      
+                            window.location = "/";
+                          
+                          
+                    }
+                    
+                },
+                error: function (jqXhr, textStatus, errorThrown) {
+                    
+                    $('#op').html('<div class="alert alert-danger animated bounce mt-4" role="alert"><i class="fa fa-warning animated swing infinite"></i> Contact system Admin. System error</div>');
+                    console.log(jqXhr + " || " + textStatus + " || " + errorThrown);
+                } 
+            });
+          }
+        }
+
+        $(document).ready(function() {
+
+          $('#register-form').click(function(){
+                
+              register_submit();  
+              return false;    
+            });
+
+            $('#login-form').click(function(){
+              login_submit();
+              return false;
+            });
+        });
+  </script>
 </body>
 </html>

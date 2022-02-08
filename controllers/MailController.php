@@ -11,7 +11,7 @@ class MailController
 	
 	public function send_email($mj_from_email, $mj_from_name, $mj_to_email, $mj_to_name, $mj_subject, $mj_text, $mj_html){
 
-		$mj = new \Mailjet\Client('dffb403adc2e2c7c221d4f83ac9af539', '79c6382e7e47e15f28714ec2437fd44c',true,['version' => 'v3.1']);
+		$mj = new \Mailjet\Client('0c6c639f838e9d48c5670cd3da415444', 'af504444a6348d94ba6c20b94c10090a',true,['version' => 'v3.1']);
 
 		$body = [
             'Messages' => [
@@ -61,14 +61,14 @@ class MailController
        
         
         
-        $mj_from_email = 'info@beyond-grades.com';
-    	$mj_from_name = 'Gamai Tech'; 
+        $mj_from_email = 'info@beyondfiat.net';
+    	$mj_from_name = 'NKSS ALUMNI ASSOCIATION'; 
         $mj_to_email = $body['email'];
         $mj_to_name = $body['name'];
         $mj_subject = 'Email Recieved' ;
        
         $mj_text = '';
-        $mj_html =  'Hello '.$mj_to_name.'<br>We have received your email. We will get back to you soon<br><br><br>Regards,<br>Gamai Tech';
+        $mj_html =  'Hello '.$mj_to_name.'<br>We have received your email. We will get back to you soon<br><br><br>Regards,<br>NKSS Alumni Association';
 
 
         $this->send_email($mj_from_email, $mj_from_name, $mj_to_email, $mj_to_name, $mj_subject, $mj_text, $mj_html);
@@ -86,7 +86,7 @@ class MailController
         $sender_email = $body['email'];
         $mj_from_email = 'info@beyond-grades.com';
         $mj_from_name = 'Contact Form'; 
-        $mj_to_email = 'info@beyond-grades.com';
+        $mj_to_email = 'maxwellwachira672gmail.com';
         $mj_to_name = $body['name'];
         $mj_subject = 'Contact Us Page' ;
         $message = $body['message'];

@@ -107,8 +107,8 @@ class PasswordRecovery extends Model
 
 	    $id = $row['id'];
 
-	    $mj_from_email = 'info@beyond-grades.com';
-	    $mj_from_name = 'Beyond Grades';
+	    $mj_from_email = 'info@beyondfiat.net';
+	    $mj_from_name = 'NKSS AlUMNI ASSOCIATION';
 	    $mj_to_email = $row['email'];
 	    $mj_to_name = $row['firstname']. ' '.$row['secondname'];
 	    $mj_subject = 'Password Recovery';
@@ -117,7 +117,7 @@ class PasswordRecovery extends Model
 	    // generate serial
 	    $serial = md5($id. ' '.time());
 
-	    $mj_html = 'Hello '.$mj_to_name.'<br>Use the link below to reset your password. The link shall expire in 3 hours<br>Password reset link : http://e-menu.rentlordke.com/password-reset?rst='.$serial;
+	    $mj_html = 'Hello '.$mj_to_name.'<br>Use the link below to reset your password. The link shall expire in 3 hours<br>Password reset link : http://localhost:9000/password-reset?rst='.$serial;
 
 
 	    if($this->insertRecoveryData($serial, (int)$id)){

@@ -16,9 +16,9 @@ class RegisterModel extends Model
 	public $email;
 	public $phonenumber;
 	public $password;
+	public $year;
+	public $membership;
 	public $verified_account;
-	public $type;
-	public $remember_token;
 	public $profilephoto;
 	public $deleted;
 	public Database $database;
@@ -27,7 +27,6 @@ class RegisterModel extends Model
 		$this->database = new Database();
 		$this->con = $this->database->getConnection_pdo();
 		$this->pending_payment = 1;
-		$this->type = 2;
 		$this->deleted = 0;
 		$this->verified_account = 0;
 	}
@@ -63,40 +62,10 @@ class RegisterModel extends Model
 		}
 	}
 
-	public function refExists($ref){
 
-		
-		$query = "SELECT referral_code FROM 
-	     			users 
-	     			WHERE referral_code = ?
-	     			LIMIT 1";
+	public function register($firstname, $secondname, $email, $phonenumber, $password, $year, $membership){
 
-	    
-	    // prepare query statement
-   		$stmt = $this->con->prepare($query);
-
-	    // bind email 
-	    $stmt->bindParam(1, $ref);
-
-	    // execute query
-	    $stmt->execute();
-
-		// query row count
-		$num = $stmt->rowCount();
-		// check if more than 0 record found
-		if($num > 0){
-
-			return true;
-			
-		}else if($num === 0){
-
-			return false;
-		}
-	}
-
-	public function register($firstname, $secondname, $email, $phonenumber, $password, $ref){
-
-		 	$query = "INSERT INTO users (firstname, secondname, email, phonenumber, password, type, verified_account, referral_code, updated_at, created_at, deleted)
+		 	$query = "INSERT INTO users (firstname, secondname, email, phonenumber, year, password, membership,  verified_account, pending_payment, created_at, deleted)
             VALUES
                 (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
   
@@ -108,7 +77,12 @@ class RegisterModel extends Model
 		    $this->email = $email;
 		    $this->phonenumber = $phonenumber;
 		   	$this->password = password_hash($password, PASSWORD_DEFAULT);
-		   	$referral_code = time(). "_".substr(md5(uniqid(rand(1,6))), 0, 8);
+			$this->year = (int)$year;
+			if($membership == "ordinary"){
+				$this->membership = 1;
+			}else if($membership == "executive"){
+				$this->membership = 2;
+			}
 
 		   	date_default_timezone_set("Africa/Nairobi");
 		    $created_at = date('Y/m/d H:i:s');
@@ -118,11 +92,11 @@ class RegisterModel extends Model
 		    $stmt->bindParam(2, $this->secondname);
 		    $stmt->bindParam(3, $this->email);
 		    $stmt->bindParam(4, $this->phonenumber);
-		    $stmt->bindParam(5, $this->password);
-		    $stmt->bindParam(6, $this->type);
-		    $stmt->bindParam(7, $this->verified_account);
-		    $stmt->bindParam(8, $referral_code);
-		    $stmt->bindParam(9, $created_at);
+			$stmt->bindParam(5, $this->year);
+		    $stmt->bindParam(6, $this->password);
+			$stmt->bindParam(7, $this->membership);
+		    $stmt->bindParam(8, $this->verified_account);
+		    $stmt->bindParam(9, $this->pending_payment);
 		    $stmt->bindParam(10, $created_at);
 		    $stmt->bindParam(11, $this->deleted);
 		
@@ -136,27 +110,7 @@ class RegisterModel extends Model
 		        session_start();
 				$_SESSION['email'] = $this->email;	
 		        if($this->emailVerification($this->email)){
-
-			        if(!$ref){
-			        	return true;
-			        }else{
-
-			        	 
-			        	$query = "INSERT INTO affiliates (referral_code, email, timestamp) VALUES (?, ?, ?)";
-				         // prepare query
-				    	$stmt = $this->con->prepare($query);
-				    	// bind values
-					    $stmt->bindParam(1, $ref);
-					    $stmt->bindParam(2, $this->email);
-					    $stmt->bindParam(3, $created_at);
-
-					    if($stmt->execute()){
-		
-					    	return true;
-					    }else{
-					    	return false;
-					    }
-			        }  
+			        return true;			        
 			    } else{
 			    	return false;
 			    } 
@@ -168,10 +122,8 @@ class RegisterModel extends Model
 		  
 		        // set response code - 503 service unavailable
 		        http_response_code(503);
-		        
-		  
+		        		  
 		        // tell the user
-		        //echo json_encode(array("message" => "internal_error"));
 		        return false;
 		    }
 
@@ -220,8 +172,8 @@ class RegisterModel extends Model
 
 	    $id = $row['id'];
 
-	    $mj_from_email = 'info@beyond-grades.com';
-	    $mj_from_name = 'E menu';
+	    $mj_from_email = 'info@beyondfiat.net';
+	    $mj_from_name = 'NKSS ALUMNI ASSOCIATION';
 	    $mj_to_email = $row['email'];
 	    $mj_to_name = $row['firstname']. ' '.$row['secondname'];
 	    $mj_subject = 'Account Activation';
@@ -239,7 +191,7 @@ class RegisterModel extends Model
 	    					<div class = "container">
 	    						<div class = "row">
 	    							<div class = "col-sm-12 col-lg-12 col-md-12 d-flex justify-content-left mt-5">
-	    								Hello '.$mj_to_name.'<br>Use the link below to activate your account. The link shall expire in 3 hours<br>Account Activation link : http://e-menu.rentlordke.com/activate-account?token='.$token.'&email='.$mj_to_email.'
+	    								Hello '.$mj_to_name.'<br>Use the link below to activate your account. The link shall expire in 3 hours<br>Account Activation link : http://localhost:9000/activate-account?token='.$token.'&email='.$mj_to_email.'
 	    							</div>
 	    						</div>
 	    					</div>

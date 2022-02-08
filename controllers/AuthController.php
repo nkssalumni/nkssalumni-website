@@ -65,18 +65,8 @@ class AuthController
 						exit;
 					}
 					if($loginModel->login($body['email'], $body['password'])){
-							if($body['returnurl'] === 'https://chats.beyond-grades.com'){
-
-								$cookie_name = 'name';
-								$cookie_email = 'email';
-								$cookie_name_value = $_SESSION['name'];
-								$cookie_email_value = $_SESSION['email'];
-								setcookie($cookie_name, $cookie_name_value, time() + (86400 * 30));
-								setcookie($cookie_email, $cookie_email_value, time() + (86400 * 30));
-
-								$returnurl = 'https://chats.beyond-grades.com/?user='.urlencode(base64_encode($_SESSION['name'])).'&email='.urlencode(base64_encode("you won't guess the amount of this course hash value and if you do my backend will still catch you ".$_SESSION['email']));
-							}
-							$params = ['message' => 'success', 'name' => $_SESSION['name'], 'email' => $_SESSION['email'], 'returnurl' => $returnurl];
+							
+							$params = ['message' => 'success', 'name' => $_SESSION['name'], 'email' => $_SESSION['email']];
 							echo json_encode($params);
 							exit;
 						
@@ -90,14 +80,14 @@ class AuthController
 		}
 	}
 
-	public function registerGet(){
-		$method = Application::$app->request->getMethod();
-		if($method === 'get'){
-			$csrf_token =  $this->csrf->set_csrf();
-			$body = Application::$app->request->getBody();
-			return Application::$app->router->renderView('register', ['message' => $csrf_token, 'ref' => '<input type="hidden" id = "ref" name="ref" value="'.$body['ref'].'">']);
-		}
-	}
+	// public function registerGet(){
+	// 	$method = Application::$app->request->getMethod();
+	// 	if($method === 'get'){
+	// 		$csrf_token =  $this->csrf->set_csrf();
+	// 		$body = Application::$app->request->getBody();
+	// 		return Application::$app->router->renderView('register', ['message' => $csrf_token, 'ref' => '<input type="hidden" id = "ref" name="ref" value="'.$body['ref'].'">']);
+	// 	}
+	// }
 
 	public function registerPost(){
 
@@ -105,13 +95,7 @@ class AuthController
 		$method = Application::$app->request->getMethod();
 		if($method === 'post'){
 
-			$body = Application::$app->request->getBody();
-			/*if(!$registerModel->refExists($body['ref'])){
-				$params = ['message' => 'Referral Code does not Exists <br> Click <a class = "mr-2" href = "/register">Here to register</a>'];
-				echo json_encode($params);	
-				exit;
-			}*/
-			
+			$body = Application::$app->request->getBody();	
 			if(!$this->csrf->is_csrf_valid($body['csrf_token'])){
 				$params = ['message' => 'Security Bridge Issue'];
 				echo json_encode($params);	
@@ -128,7 +112,7 @@ class AuthController
 						echo json_encode($params);
 						exit;
 					} else{
-						if(!$registerModel->register($body['firstname'], $body['secondname'], $body['email'], $body['phonenumber'], $body['password'], $body['ref'])){
+						if(!$registerModel->register($body['firstname'], $body['secondname'], $body['email'], $body['phonenumber'], $body['password'], $body['years'], $body['membership'])){
 							$params = ['message' => 'Server Error. Contact Admin'];		
 						}else{
 							$params = ['message' => 'success'];
@@ -188,12 +172,42 @@ class AuthController
 		$method = Application::$app->request->getMethod();
 
 		if($method === 'get'){
-
+			$csrf_token =  $this->csrf->set_csrf();
 			$body = Application::$app->request->getBody();
 			if($registerModel->tokenExists($body['token'], $body['email'])){
-				return Application::$app->router->renderView('account-verfication', ['message' => '<div class="alert alert-success animated bounce" role="alert"><i class="fa fa-check animated swing infinite"></i>Your account has been activated. Click <a href = "/sign-in">here to sign in</a></div>']);
+				return Application::$app->router->renderView('login-modal', ['token'=>$csrf_token, 'message' => '<div class="alert alert-success animated bounce d-flex justify-content-center" role="alert" style = "width:70%"><i class="fa fa-check animated swing infinite mr-3 mt-2"></i><span class = "mt-2">Your account has been activated </span> <button class="ml-3 btn btn-md text-light"  style="background-color:#00BFFF;" type="button"  data-toggle="modal" data-target="#loginModal">Login </button></div>
+				<section>
+					<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-md">
+					<div class="modal-content">
+						<div class="modal-header">
+						<h2 class="modal-title" id="loginModalLabel">LOGIN</h2>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+						</div>
+						<div class="modal-body">
+						<div class="container-fluid">
+							<form id="log">
+							<div id = "op"></div>
+							<label for="login_email"  class = "mt-3">Email:</label>
+							<input type="text" id="login_email" class="form-control">
+							<label for="login_password">password:</label>
+							<input type="password" id="login_password" class="form-control">
+							</form>                  
+							<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							<button type="button" class="btn btn-primary" id = "login-form">Login</button>
+							</div>
+						</div>
+						</div>
+					</div>
+					</div>
+				</div>
+				</section>
+			']);
 			}else{
-				return Application::$app->router->renderView('account-verfication',  ['message' => '<div class="alert alert-danger animated bounce" role="alert"><i class="fa fa-warning animated swing infinite"></i>Token Does not Exist</div>']);
+				return Application::$app->router->renderView('account-verfication',  ['message' => '<div class="alert alert-danger animated bounce" role="alert"><i class="fa fa-warning animated swing infinite"></i>Token Does not Exist</div>'
+				]);
 			}
 
 		}

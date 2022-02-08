@@ -6,7 +6,7 @@ class Database{
   
     // specify your own database credentials
     private $host = "localhost";
-    private $db_name = "e-menu";
+    private $db_name = "nkssa";
     private $username = "root";
     private $password = "Db@maxwell";
     public $conn;

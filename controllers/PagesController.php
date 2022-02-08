@@ -3,6 +3,7 @@
 namespace app\controllers;
 use app\core\Application;
 use app\core\Controller;
+use app\core\csrf;
 use app\core\Request;
 use app\models\SubscribeModel;
 use app\models\CustomSession;
@@ -10,8 +11,13 @@ use app\models\CustomSession;
 class PagesController extends Controller
 {
 
+	public function __construct(){
+		$this->csrf = new csrf();
+	}
+	
 	public function home(){
-		$params = [];
+		$csrf_token =  $this->csrf->set_csrf();
+		$params = ['message' => $csrf_token];
 		return Application::$app->router->renderView('landing', $params);
 	}
 

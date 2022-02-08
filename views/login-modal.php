@@ -27,6 +27,8 @@
     <!--custom css -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
+  
+
     <title>NKSSAA</title>
 </head>
 
@@ -57,21 +59,83 @@
     </nav>
   </section>
    
-     <div class="container">
-          <div class = "row animated bounce" >
-              <div class="none col-lg-3 col-md-3 col-sm-12 mt-5 mt-5"></div>
-              <div class="col-lg-6 col-md-6 col-sm-12 card mt-5 shadow-lg p-3 bg-light mb-5" >
-                    
-                    <?php echo $message;?>
+   
+    <div class = "mt-5 mr-5 ml-5 d-flex justify-content-center">  
+    <?php echo $token;?>              
+    <?php echo $message;?>
+    </div>
                   
-              </div>
-          </div>
-      </div> 
-</div>
+   
   
     
  
   <script src="assets/3rdparties/jquery/jquery.js"></script>
   <script src="assets/3rdparties/bootstrap/js/bootstrap.js"></script>
+  <script>
+      
+		function login_submit(){
+  
+          // pull in values/variables
+          var email = $("#login_email").val();
+          var password = $("#login_password").val();
+          var csrf_token = $("#csrf").val();
+          var returnurl = $("#returnurl").val();
+        
+
+          //check if any of the variable is empty
+          if (!email || !password) {
+            $('#op').html('<div class="alert alert-danger animated bounce mt-4" role="alert"><i class="fa fa-warning animated swing infinite"></i> Please fill out all sections</div>');
+          } 
+          else {
+
+            $('#op').html('');
+
+            $.ajax({  
+                url:"/login",  
+                method:"POST",  
+                data:{
+                  csrf_token:csrf_token,
+                  email:email,
+                  password:password,
+                  returnurl:returnurl
+
+                },
+                dataType: 'text', 
+                success:function(data)  
+                {  
+                    //console.log(data);
+                    var response = JSON.parse(data);
+                    //console.log(response);
+                    if (response.message !== 'success') {
+                    
+                      $('#op').html('<div class="alert alert-danger animated bounce mt-4" role="alert"><i class="fa fa-warning animated swing infinite"></i> ' + response.message +'</div>');
+                                  
+                      // clear the fields
+
+                    }else if(response.message === 'success'){
+                     
+                      
+                            window.location = "/";
+                          
+                          
+                    }
+                    
+                },
+                error: function (jqXhr, textStatus, errorThrown) {
+                    
+                    $('#op').html('<div class="alert alert-danger animated bounce mt-4" role="alert"><i class="fa fa-warning animated swing infinite"></i> Contact system Admin. System error</div>');
+                    console.log(jqXhr + " || " + textStatus + " || " + errorThrown);
+                } 
+            });
+          }
+        }
+        $(document).ready(function() {
+
+            $('#login-form').click(function(){
+                login_submit();
+                return false;
+            });
+        });
+  </script>
 
 </html>
