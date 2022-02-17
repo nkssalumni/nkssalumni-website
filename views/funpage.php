@@ -22,7 +22,11 @@
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat'>
 
    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="assets/3rdparties/bootstrap/css/bootstrap.css">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"   integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+ 
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+
+ </script>
 
     <!--animate-->
     <link rel="stylesheet" type="text/css" href="assets/3rdparties/animate/animate.css">
@@ -75,8 +79,8 @@
   <section>
     <nav class="navbar navbar-expand-lg bg-primary navbar-dark navbar-right ">
       <div class="container"> 
-        <img src="assets/images/logo.png" width="20" class="img-set">
-        <a class="navbar-brand" href="/"></a>
+      
+        <a class="navbar-brand" href="/">  <img src="assets/images/logo.png" width="20" class="img-set"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span> </button> 
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -113,7 +117,7 @@
           <img src="assets/images/big-crew.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"onclick="large('img5')" ondblclick="small('img5')" id="img5" />
           <img src="assets/images/large.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"onclick="large('img6')" ondblclick="small('img6')" id="img6" />
         </div>
-        <div class="assets/column">
+        <div class="column">
           <img src="assets/images/kamangu.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" onclick="large('img7')" ondblclick="small('img7')" id="img7">
           <img src="assets/images/sch.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" onclick="large('img8')" ondblclick="small('img8')" id="img8">
           <img src="assets/images/new.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"  onclick="large('img9')" ondblclick="small('img9')" id="img9">

@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-   
-    <!-- Required meta tags -->
+    
+     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
      <!-- Site Metas --> 
     <meta name="description" content="">
     <meta name="title" content="">
     <meta name="keywords" content="">
-    <meta name="author" content="maxwellwachira67@gmail.com +254703519593">
-
+    <meta name="author" content="">
 
     <!--icon-->
     <link rel="icon" href="assets/img/favicon/favicon.ico" type="image/x-icon"/>
@@ -19,75 +18,53 @@
     <!-- Font Awesome CSS -->
     <script src="https://kit.fontawesome.com/91ae273ed7.js" crossorigin="anonymous"></script>
 
-    <!--CK Editor-->
-    <script src="https://cdn.ckeditor.com/ckeditor5/27.1.0/classic/ckeditor.js"></script>
-
-    <!-- Montserrat -->
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat'>
-
    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/3rdparties/bootstrap/css/bootstrap.css">
 
     <!--animate-->
     <link rel="stylesheet" type="text/css" href="assets/3rdparties/animate/animate.css">
 
-    <!--pogo-slider-->
-    <link rel="stylesheet" href="assets/3rdparties/pogoslider/pogo-slider.min.css">
+    <!--International CODE-->
+    <link rel="stylesheet" href="assets/3rdparties/build/css/intlTelInput.css">
 
     <!--custom css -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
-    <title>Gamai Tech</title>
+    <title>NKSSAA</title>
   </head>
-  <body>
-    <div class="horizontal-navbar">   
-      <nav class="navbar navbar-expand-lg mb-0">
-        <a class="navbar-brand" href="/"><img src="assets/img/logo.png" alt="logo"></a>
-        <button class="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <i class="fas fa-bars fa-lg"></i>
-        </button>
+</head>
 
-        <div class="collapse navbar-collapse flex-column" id="navbarSupportedContent">
-          <ul class="nav navbar-nav mx-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="/">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/#">Products</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/#">User Manuals</a>
-            </li>
-           <li class="nav-item">
-              <a class="nav-link" href="#">Contact Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/sign-in">Login</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/sign-up">Register</a>
-            </li>
+<!--Body and Background Image -->
+<body style="background-image: url(assets/images/backa.jpg);">
+<!--navigation panel -->
+  <section>
+    <nav class="navbar navbar-expand-lg bg-primary navbar-dark navbar-right ">
+      <div class="container"> 
+        <a class="navbar-brand" href="/"><img src="assets/images/logo.png" width="20" class="img-set"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span> </button> 
+        <div class="collapse navbar-collapse " id="navbarNav">
+          <ul class="navbar-nav ml-auto text-light"> 
+            <li class="nav-item"> <a class="nav-link active" aria-current="page" href="/">Home</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="/about">About Us</a> </li> 
+            <li class="nav-item"> <a class="nav-link" href="/contact-us">Contact Us</a> </li> 
+            <li class="nav-item"> <a class="nav-link" href="/our-activities">Our Activities</a> </li>
           </ul>
-         <div class="navbar-nav flex-row mb-2">
-            <input id="search" type="text" class="nav-form" placeholder="Search....">
-              <div class="input-group-append">
-                  <span class="input-group-text nav-form-search-icon"><i class="fa fa-search fa-lg"></i></span>
-              </div>
-        </div>
-        </div>
-        <div class="text-theme mr-2 font-weight-bold">
-          IoT made easy
-        </div>
-      </nav>
-    </div>
+          <ul class="navbar-nav">
+            <div>
+              <button class="btn btn-md text-light" style="background-color:#00BFFF;" type="button" data-toggle="modal" data-target="#regModal"  > Register </button>
+              <button class="btn btn-md text-light"  style="background-color:#00BFFF;" type="button"  data-toggle="modal" data-target="#loginModal">Login </button>
+            </div>
+          </ul>
+        </div> 
+      </div>
+    </nav>
+  </section>
     <div class="bg-light-pink h-100">
       <div class=" container p-5">
         <div class="row">
           <div class="col-sm-12 col-md-12 col-lg-12">
-            <h3 class="text-center">Gamai Tech says....</h3>
+           
             <h1 class="text-center font-weight-bolder"><i>404 </i><span class="smaller"><i class="font-weight-normal"> That's an error</i></span></h1>
           </div> 
         </div> 

@@ -84,9 +84,9 @@ class MailController
         $body = Application::$app->request->getBody();
         $sender_name = $body['name'];
         $sender_email = $body['email'];
-        $mj_from_email = 'info@beyond-grades.com';
+        $mj_from_email = 'info@beyondfiat.net';
         $mj_from_name = 'Contact Form'; 
-        $mj_to_email = 'maxwellwachira672gmail.com';
+        $mj_to_email = 'maxwellwachira67@gmail.com';
         $mj_to_name = $body['name'];
         $mj_subject = 'Contact Us Page' ;
         $message = $body['message'];

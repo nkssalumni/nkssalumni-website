@@ -8,7 +8,7 @@ use app\controllers\AdminController;
 use app\controllers\MailController;
 use app\controllers\AuthController;
 use app\controllers\MealsController;
-use app\controllers\ChatController;
+use app\controllers\PesapalController;
 use app\controllers\ShopController;
 use app\core\Application;
 use app\core\Model;

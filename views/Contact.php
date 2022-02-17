@@ -22,10 +22,13 @@
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat'>
 
    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="assets/3rdparties/bootstrap/css/bootstrap.css">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"   integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
+   <script src="assets/3rdparties/jquery/jquery.js"></script>
     <!--animate-->
     <link rel="stylesheet" type="text/css" href="assets/3rdparties/animate/animate.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!--custom css -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -33,9 +36,21 @@
     <title>Contact Us</title>
 
     <style>
+    
     body{
     display: flexbox;
+    width:100%;
     }
+    .cont{
+            position: absolute !important;
+            top: 30% !important;
+            left:0;
+            right:0;
+            margin:auto;
+            transform: translateY(-50) translateX(-50);
+            
+        }
+    
     @media screen and (min-height: 480px){
         
         .cont{
@@ -216,8 +231,8 @@
 <section>
     <nav class="navbar navbar-expand-lg bg-primary navbar-dark navbar-right ">
       <div class="container"> 
-        <img src="assets/images/logo.png" width="20" class="img-set">
-        <a class="navbar-brand" href="/"></a>
+       
+        <a class="navbar-brand" href="/"> <img src="assets/images/logo.png" width="20" class="img-set"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span> </button> 
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -249,18 +264,20 @@
         </div>
     </section>
 
-    <section>
+    <section class = "mt-5">
+  
         <div class="container cont">
             <div class="d-sm-flex align-item-center justify-content-between contacts border border-primary shadow-lg p-3 mb-5 bg-body rounded " >
                 <div class="container">
                     <form>
+                        <div id = "op"></div>
                         <h3> Send us a Message </h3>
                         <label for="simu">name : </label>
-                        <input type="text" id="simu"  class="form-control">
-                        <label for="nametwo">Phone number : </label>
-                        <input type="text" id="nametwo"  class="form-control">
+                        <input type="text" id="name"  class="form-control">
+                        <label for="nametwo">Email : </label>
+                        <input type="email" id="email"  class="form-control">
                         <label for="three">Message : </label>
-                        <textarea id="three"  placeholder="Write us a message" class="form-control" rows="8" cols="50"></textarea>
+                        <textarea id="message"  placeholder="Write us a message" class="form-control" rows="8" cols="50"></textarea>
                         <br />
                         <button class="btn bg-primary text-light">Send</button>
                         <br>
@@ -302,5 +319,69 @@
     <script src="https://kit.fontawesome.com/9d623992aa.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
     </script>
+    <script>
+        function clearSendFields(){
+        $("#name").val('');
+        $("#email").val('');
+        $("#message").val('');
+      }
+
+       function contactFormSend(){
+          var name = $("#name").val();
+          var email = $("#email").val();
+          var message = $("#message").val();
+
+          if(!name || !email || !message){
+             $('#op').html('<div class="alert alert-danger animated bounce" role="alert"><i class="fa fa-warning animated swing infinite"></i> Please fill out all sections</div>');
+          }else{
+            $('#op').html('');
+
+            $.ajax({
+
+              url:"/contact-us",  
+              method:"POST",  
+              data:{
+                name:name,
+                email:email,
+                message:message
+              },
+              dataType: 'text', 
+              success:function(data)  
+              {  
+                  //console.log(data);
+                  var response = JSON.parse(data);
+                  //console.log(response);
+                  if (response.message !== 'success') {
+                  
+                     $('#op').html('<div class="alert alert-danger animated bounce" role="alert"><i class="fa fa-warning animated swing infinite"></i> ' + response.message +'</div>');
+
+                  }else {
+                     $('#op').html('<div class="alert alert-success animated bounce" role="alert"><i class="fa fa-check"></i>Message Sent!!</div>');
+                    clearSendFields();
+                    setInterval(function(){
+                      $('#op').html('');
+                    }, 10000);
+                  }
+                  
+              },
+              error: function (jqXhr, textStatus, errorThrown) {
+                  
+                  $('#op').html('<div class="alert-danger animated bounce" role="alert"><i class="fa fa-warning animated swing infinite"></i> Contact system Admin. System error</div>');
+                  console.log(jqXhr + " || " + textStatus + " || " + errorThrown);
+                }
+              
+
+            });
+          }
+       }
+     
+     $(document).ready(function() {
+       $('form').submit(function(event){
+          event.preventDefault();
+          contactFormSend();
+          return false;
+       });
+     });
+        </script>
 </body>
 </html>

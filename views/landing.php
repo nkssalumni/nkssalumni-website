@@ -89,7 +89,6 @@
                 <input type="text" class="form-control" id="email"/>
                 <label for="password" class="form-text">Password:</label>
                 <input type="password" class="form-control" id="password"/>
-                <span toggle="#confirmPassword-field" id="toggle-confirmPassword" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                 <label for="confirmPassword" class="form-text">Confirm Password:</label>
                 <input type="password" class="form-control" id="confirmPassword"/>
                 <label class="form-text"  for="years">Year:</label>

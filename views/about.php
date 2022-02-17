@@ -83,8 +83,8 @@
 <section>
     <nav class="navbar navbar-expand-lg bg-primary navbar-dark navbar-right ">
       <div class="container"> 
-        <img src="assets/images/logo.png" width="20" class="img-set">
-        <a class="navbar-brand" href="/"></a>
+        
+        <a class="navbar-brand" href="/"><img src="assets/images/logo.png" width="20" class="img-set"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span> </button> 
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
