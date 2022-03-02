@@ -1,0 +1,725 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+body{
+	
+  scroll-behavior: smooth;
+  font-family: 'Ubuntu', sans-serif;
+
+}
+	*, *:before, *:after {
+		margin:0;
+		padding:0;
+		box-sizing: inherit;
+	}
+
+
+
+ html {
+
+	 box-sizing: border-box;
+
+	  font-family: 'Ubuntu', sans-serif;
+
+	 font-size: 62.5%;
+
+}
+nav{
+font-family: 'Ubuntu', sans-serif;
+
+	 font-size: 150%;
+
+}
+
+ @media only screen and (max-width: 800px) {
+
+	 html {
+
+		 font-size: 50%;
+
+	}
+
+}
+
+ body {
+
+	 background-color: #000;
+
+	 color: #fff;
+
+	 padding: 0;
+}
+
+
+ @media only screen and (max-width: 1000px) {
+
+	 body {
+
+		 padding: 0;
+
+	}
+
+}
+
+ .mycontainer {
+
+	 position: relative;
+
+	 overflow: hidden;
+
+	 border-radius: 5rem;
+	 opacity: 0.9;
+
+}
+
+ @media only screen and (max-width: 1000px) {
+
+	 .mycontainer {
+
+		 border-radius: 0;
+
+	}
+
+}
+
+ .myslider {
+
+	 display: flex;
+
+	 width: 500%;
+
+	 height: 55rem;
+
+	 transition: all 0.25s ease-in;
+
+	 transform: translateX(0);
+	 position: relative;
+
+}
+
+
+ .myslider .box {
+
+	 height: 100%;
+
+	 width: 100%;
+
+	 display: grid;
+
+	 grid-template-columns: repeat(2, 1fr);
+
+	 align-items: center;
+
+	 overflow: hidden;
+
+	 position: relative;
+
+}
+
+ @media only screen and (max-width: 650px) {
+
+	 .myslider .box {
+
+		 grid-template-columns: 1fr;
+
+		 grid-template-rows: repeat(2, 1fr);
+
+	}
+
+}
+
+ .myslider .box .bg {
+
+	 padding: 2rem;
+
+	 background-color: rgba(0, 0, 0, .2);
+
+	 width: 55%;
+
+	 transform: skewX(7deg);
+
+	 position: absolute;
+
+	 height: 100%;
+
+	 left: -10%;
+
+	 padding-left: 20rem;
+
+	 transform-origin: 0 100%;
+	
+
+}
+
+ @media only screen and (max-width: 800px) {
+
+	 .myslider .box .bg {
+
+		 width: 65%;
+
+	}
+
+}
+
+ @media only screen and (max-width: 650px) {
+
+	 .myslider .box .bg {
+
+		 width: 100%;
+
+		 left: 0;
+
+		 bottom: 0;
+
+		 height: 54%;
+
+		 transform: skewX(0deg);
+
+	}
+
+}
+
+ .myslider .box .bg::before {
+
+	 content: "";
+
+	 width: 100%;
+
+	 height: 100%;
+
+	 position: absolute;
+
+	 left: 0;
+
+	 top: 0;
+
+	 background-color: inherit;
+
+	 pointer-events: none;
+
+	 transform: skewX(10de;g)
+
+}
+
+ @media only screen and (max-width: 650px) {
+
+	 .myslider .box .bg::before {
+
+		 width: 120%;
+
+		 bottom: 0;
+
+		 transform: skewX(0deg);
+
+	}
+
+}
+
+ .myslider .box .details {
+
+	 padding: 5rem;
+
+	 padding-left: 10rem;
+
+	 z-index: 100;
+
+	 grid-column: 1 / span 1;
+
+	 grid-row: -1;
+
+}
+
+ @media only screen and (max-width: 650px) {
+
+	 .myslider .box .details {
+
+		 grid-row: 2 / span 1;
+
+		 grid-column: -1;
+
+		 text-align: center;
+
+		 padding: 2rem;
+
+		 transform: translateY(-9rem);
+
+	}
+
+}
+
+ .myslider .box .details h1 {
+
+	 font-size: 3.5rem;
+
+	 font-weight: 500;
+
+	 margin-bottom: 0.5rem;
+
+}
+
+ .myslider .box .details p {
+
+	 display: inline-block;
+
+	 font-size: 1.3rem;
+
+	 color: #b5b4b4;
+
+	 margin-bottom: 2rem;
+
+	 margin-right: 5rem;
+
+}
+
+ @media only screen and (max-width: 800px) {
+
+	 .myslider .box .details p {
+
+		 margin-right: 0;
+
+	}
+
+}
+
+ .myslider .box .details button {
+
+	 padding: 1rem 3rem;
+
+	 color: #fff;
+
+	 border-radius: 2rem;
+
+	 outline: none;
+
+	 border: none;
+
+	 cursor: pointer;
+
+	 transition: all 0.3s ease;
+
+}
+
+ .myslider .box .details button:hover {
+
+	 opacity: 0.8;
+
+}
+
+ .myslider .box .details button:focus {
+
+	 outline: none;
+
+	 border: none;
+
+}
+
+ .myslider .box1 {
+
+	 background-color: #09F;
+
+}
+
+ .myslider .box1 .illustration .inner {
+
+	 background-color: #f07;
+
+}
+
+ .myslider .box1 .illustration .inner::after, .myslider .box1 .illustration .inner::before {
+
+	 background-color: rgba(255, 0, 119, .4);
+
+}
+
+ .myslider .box1 button {
+
+	 background-color: #87CEFA;
+
+}
+
+ .myslider .box2 {
+
+	 background-color: #87CEFA;
+
+}
+
+ .myslider .box2 .illustration .inner {
+
+	 background-color: #03f;
+
+}
+
+ .myslider .box2 .illustration .inner::after, .myslider .box2 .illustration .inner::before {
+
+	 background-color: rgba(0, 51, 255, .4);
+
+}
+
+ .myslider .box2 button {
+
+	 background-color:   #000080;
+
+}
+
+ .myslider .box3 {
+
+	 background-color: #808080;
+
+}
+
+ .myslider .box3 .illustration .inner {
+
+	 background-
+
+}
+
+ .myslider .box3 .illustration .inner::after, .myslider .box3 .illustration .inner::before {
+
+	 background-color: rgba(0, 255, 68, .4);
+
+}
+
+ .myslider .box3 button {
+
+	 background-color: #4682B4;
+
+}
+
+ .myslider .box4 {
+
+	 background-color:  #333;
+
+}
+
+ .myslider .box4 .illustration .inner {
+
+	 background-color: #ff4e00;
+	 
+
+}
+
+ .myslider .box4 .illustration .inner::after, .myslider .box4 .illustration .inner::before {
+
+	 background-color: rgba(255, 78, 0, ;.4)
+
+}
+
+ .myslider .box4 button {
+
+	 background-color:  #FFD700;
+
+}
+
+ .myslider .box5 {
+
+	 background-color: #00C;
+
+}
+
+ .myslider .box5 .illustration .inner {
+
+	 background-color: #ff4e00f ;
+
+}
+
+ .myslider .box5 .illustration .inner::after, .myslider .box5 .illustration .inner::before {
+
+	 background-color: rgba(128, 0, 255, .4);
+
+}
+
+ .myslider .box5 button {
+
+	 background-color: #696969;
+
+}
+
+ .myslider .illustration {
+
+	 grid-column: -2;
+
+	 grid-row: -1;
+
+	 justify-self: center;
+
+}
+
+ @media only screen and (max-width: 650px) {
+
+	 .myslider .illustration {
+
+		 grid-row: 1 / span 1;
+
+		 grid-column: -1;
+
+		 display: flex;
+
+		 justify-content: center;
+
+		 align-items: center;
+
+	}
+
+}
+
+ .myslider .illustration div {
+
+	 height: 25rem;
+
+	 width: 18rem;
+
+	 border-radius: 3rem;
+
+	 background-color: #f07;
+
+	 position: relative;
+
+	 transform: skewX(-10deg);
+	 
+	 
+
+}
+
+ @media only screen and (max-width: 800px) {
+
+	 .myslider .illustration div {
+
+		 height: 0rem;
+
+		 width: 0rem;
+
+	}
+	.picha1{
+		width: 40%;
+ 
+
+}
+
+}
+
+ .myslider .illustration div::after, .myslider .illustration div::before {
+
+	 content: "";
+
+	 position: absolute;
+
+	 height: 100%;
+
+	 width: 100%;
+
+	 border-radius: 3rem;
+
+	 top: 0;
+
+	 left: 0;
+	 
+	 
+	 
+	 
+
+}
+
+ .myslider .illustratiotransform:n div::after {
+
+	 ;
+
+}
+
+ .myslider .illustration div::bef: translate(2rem, -2rem);
+oretransform {
+
+	 
+}
+
+ .prev, .next, .trail {
+
+	 z-index: 10000;
+
+	 position: absolute;
+
+}
+
+ .prev, .next {
+
+	 width: 4rem;
+
+	 cursor: pointer;
+
+	 opacity: 0.2;
+
+	 transition: all 0.3s ease;
+
+}
+
+ @media only screen and (max-width: 650px) {
+
+	 .prev, .next {
+
+		 display: none;
+
+	}
+
+}
+
+ .prev:hover, .next:hover {
+
+	 opacity: 1;
+
+}
+
+ .prev {
+
+	 top: 50%;
+
+	 left: 2%;
+
+	 transform: translateY(-50%);
+
+}
+
+ .next {
+
+	 top: 50%;
+
+	 right: 2%;
+
+	 transform: translateY(-50%);
+
+}
+
+ .trail {
+
+	 bottom: 5%;
+
+	 left: 50%;
+
+	 transform: translateX(-50%);
+
+	 width: 60%;
+
+	 display: grid;
+
+	 grid-template-columns: repeat(5, 1fr);
+
+	 gap: 1rem;
+
+	 text-align: center;
+
+	 font-size: 1.5rem;
+
+}
+
+ @media only screen and (max-width: 650px) {
+
+	 .trail {
+
+		 width: 90%;
+
+		 bottom: 13%;
+
+	}
+
+}
+
+ .trail div {
+
+	 padding: 2rem;
+
+	 border-top: 3px solid #fff;
+
+	 cursor: pointer;
+
+	 opacity: 0.5;
+
+	 transition: all 0.3s ease;
+
+}
+
+ .trail div:hover {
+
+	 opacity: 0.6;
+
+}
+
+ @media only screen and (max-width: 650px) {
+
+	 .trail div {
+
+		 padding: 1rem;
+
+	}
+	.picha1{
+  
+width: 20%;
+}
+
+}
+
+ .active {
+
+	 opacity: 1 !important;
+
+}
+.picha{
+  
+width: 40%;
+
+}
+
+	
+@media only screen and (max-width: 768px) {
+
+	 .myslider {
+
+		 height: 90vh;
+
+	}
+	.mywhite
+	{
+		color:#FFF;
+	}
+	.picha1{
+  
+width: 55%;
+}
+.picha{
+  
+width: 75%;
+}
+.picha2{
+  
+width: 80%;
+}
+
+}
+	
+
+
+
+ @media only screen and (min-width: 769px) {
+
+	 .myslider .illustration div {
+
+		 height: 0rem;
+
+		 width: 0rem;
+
+	}
+
+.mypadding{
+
+      background-color: #000;
+	 color: #fff;
+      padding: 4rem;
+     background-image: url(all.jpg);
+}
+.picha1{
+  
+width: 75%;
+}
+.picha2{
+  
+width: 80%;
+}
+}
+
+
+	

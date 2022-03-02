@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>NKSSA</title>
+
+  <link rel="stylesheet" href="css/mystyles-one.css">
+  <link rel="stylesheet" href="css/initialcards.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"   integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+</script>
+</head>
+
+<body>
+
+<section>
+
+
+<nav class="navbar navbar-expand-lg bg-primary navbar-dark navbar-right ">
+
+ <div class="container"> 
+
+ <img src="images/logo.png" width="95" class="img-set">
+
+<a class="navbar-brand" href="#">
+
+</a>
+
+ <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+<span class="navbar-toggler-icon"></span> </button> 
+
+<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+
+ <ul class="navbar-nav text-light"> 
+
+     
+
+<li class="nav-item"> <a class="nav-link active" href="landing.html">Home</a> </li>
+
+ <li class="nav-item"> <a class="nav-link" href="about.html">About Us</a> </li> 
+
+ <li class="nav-item"> <a class="nav-link" href="Contact.html">Contact Us</a> </li> 
+
+ <li class="nav-item"> <a class="nav-link" href="#">Our Activities</a> </li>
+
+</ul>
+
+</ul>
+<ul class="navbar-nav">
+
+    <div>
+
+    <button class="btn btn-md text-light" style="background-color:#00BFFF;" type="button"data-bs-toggle="modal" data-bs-target="#regModal"  > Register </button>
+
+    <button class="btn btn-md text-light"  style="background-color:#00BFFF;" type="button"  data-bs-toggle="modal" data-bs-target="#loginModal">Login </button>
+
+</div>
+
+</ul>
+
+</div> 
+
+</div>
+
+
+</nav>
+
+</section>
+<body style="background-image: url(images/backa.jpg);">
+<section>
+   <div>
+    <div class="modal fade" id="regModal" tabindex="-1" aria-labelledby="portModalLabel" aria-hidden="true">
+
+        <div class="modal-dialog modal-xl modal-dialog-scrollable">
+    
+            <div class="modal-content">
+    
+           <div class="modal-header">
+    
+                <h2 class="modal-title display-6" >Join Alumni Association </h2>
+    
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    
+            </div>
+            
+    
+           <div class="modal-body">
+    
+                <div class="container-fluid">
+    
+                  <div>
+    
+    <p class="lead">Your Details: </p>
+    
+    <form>
+    
+    <div class="container">
+    
+    <label for="fname" class="form-text">First Name:</label>
+    
+    <input type="text" class="form-control" id="fname"/>
+    
+    <label for="sname" class="form-text">Second Name:</label>
+    
+    <input type="text" class="form-control" id="sname"/>
+    
+    <label for="pnum" class="form-text">Phone Number:</label>
+    
+    <input type="text" class="form-control" id="pnum"/>
+    
+    <label for="email" class="form-text">Email:</label>
+    
+    <input type="text" class="form-control" id="email"/>
+    
+    <label class="form-text"  for="years">Year:</label>
+    
+    
+                     <select id="years" class="form-select">
+    
+                         <option selected>Choose...</option>
+    
+                         <option value="2008"> 2008 </option>
+    
+                         <option value="2009"> 2009 </option>
+    
+                        <option value="2010"> 2010 </option>
+    
+                        <option value="2011"> 2011 </option>
+    
+                       <option value="2012"> 2012 </option>
+    
+                <option value="2013"> 2013</option>  
+    
+           <option value="2014"> 2014 </option>         
+    
+    <option value="2015"> 2015</option>
+    
+    <option value="2016"> 2016 </option>
+    
+    <option value="2017"> 2017 </option>
+    
+    <option value="2018"> 2018 </option>
+    
+    <option value="2019"> 2019</option>
+    
+    <option value="2020"> 2020 </option>
+    
+    <option value="2021"> 2021</option>
+    
+    <option value="2022"> 2022 </option>
+    
+                    </select>
+    
+    <br />
+      <br />
+      <br />
+    
+     <hr class="hrOriz">
+     <p class="lead">Type of Membership:</p>
+    
+    <div class="form-check form-check-inline"> <input class="form-check-input" type="radio" id="inlineCheckbox1" value="option1"> <label class="form-check-label" for="inlineCheckbox1">Ordinary</label> </div> <div class="form-check form-check-inline"> <input class="form-check-input" type="radio" id="inlineCheckbox2" value="option2"> <label class="form-check-label" for="inlineCheckbox2">Executive</label> </div> <div class="form-check form-check-inline"> </div>
+    
+    <br />
+    <br />
+    <hr class="hrOriz">
+    
+    
+    <p> Note: For ordinary membership you will be required to pay a registration fee of Ksh 300 and yearly subscription of Ksh 1200.</p>
+    
+                        <br />
+    
+                        <p> For Exercutive Membership you will be required to pay a registration fee of ksh 1000 and a yearly subscription of Ksh 2500. </p>
+                        </div>
+                       </div>
+    
+    
+    <br/>
+    
+    <br />
+    
+    </div>
+    
+    <br />
+    
+    </div>
+    
+           <div class="modal-footer">
+    
+               <button class="btn bg-secondary text-light" data-bs-dismiss="modal"> Close </button>
+    
+    <button class="btn bg-primary text-light " data-bs-dismiss="modal"> Submit </button>
+            </div>
+    
+    </form>
+    </div>
+    
+    </div>
+    </div>
+     </div>
+    </section>
+    
+    <section>
+    <div>
+        <!-- Modal -->
+    
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    
+    
+        <div class="modal-dialog modal-md">
+    
+    
+           <div class="modal-content">
+    
+            <div class="modal-header">
+    
+                <h2 class="modal-title" id="loginModalLabel">LOGIN</h2>
+    
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    
+            </div>
+    
+    
+    
+            <div class="modal-body">
+    
+                <div class="container-fluid">
+    
+    
+                   <form id="log">
+    
+                       <label for="Phone">Phone No:</label>
+    
+    
+    
+                    <input type="text" id="phone" class="form-control"></input>
+    
+    
+    
+                    <label for="password">password:</label>
+    
+    
+    
+                    <input type="password" id="saelJobNr" class="form-control"></input>
+    
+    </form>
+       
+    
+    
+                   
+    
+            <div class="modal-footer">
+    
+    
+    
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    
+                <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" form="reg">Login</button>
+    
+            </div>
+
+   </div>
+</section>
+
+<section>
+    <div>
+        <div class="mypadding">
+            <div class="mycontainer">
+        
+                <div class="myslider">
+        
+        
+        
+                    <div class="box1 box">
+        
+                        <div class="bg"></div>
+        
+                        <div class="details">
+        
+                            <h1 class="mywhite">Did you go NKSS?</h1>
+        
+                            <p>
+        
+                                Join the alumni today and make your mark.
+                            </p>
+                            <br>
+        
+                            <button data-bs-target="#regModal" data-bs-toggle="modal">Join US</button>
+        
+                        </div>
+        
+        
+        
+                        <div class="illustration">
+                        
+        
+                            <div class="inner"></div>
+                            
+                            <img src="images/alu.png" alt="Student" border="0" class="picha1" >
+        
+                        </div>
+        
+                    </div>
+        
+        
+        
+        
+        
+                    <div class="box2 box">
+        
+                        <div class="bg"></div>
+        
+                        <div class="details">
+        
+                            <h1 class="mywhite" >Join our Network.</h1>
+        
+                            <p>
+        
+                                We have alot of proffestionals, bussinesspersons and takents amonst us, who give a diverse and rich pool for  beggining  your network for future fruitful reslust.
+                            </p>
+        
+                            <button data-bs-target="#regModal" data-bs-toggle="modal" >Join Us</button>
+        
+                        </div>
+        
+        
+        
+                        <div class="illustration">
+        
+                            <div class="inner"></div>
+        <img src="images/network.png" alt="Resouces" border="0" class="picha1">
+        
+                        </div>
+        
+                    </div>
+        
+        
+        
+                    <div class="box3 box">
+        
+                        <div class="bg"></div>
+        
+                        <div class="details">
+        
+                            <h1 class="mywhite">Let's catch up</h1>
+        
+                            <p>
+        We usually have meetings that happens occationally, where you can meet fellow alumni interact and catch up.
+                                
+                            </p>
+        
+                            <button data-bs-target="#regModal" data-bs-toggle="modal" >Join Us</button>
+        
+                        </div>
+        
+        
+        
+                        <div class="illustration">
+        
+                            <div class="inner"></div>
+        <img src="images/funmoments.png" alt="Equip" border="0" class="picha2">
+                        </div>
+        
+                    </div>
+        
+        
+        
+                    <div class="box4 box">
+        
+                        <div class="bg"></div>
+        
+                        <div class="details">
+        
+                            <h1 class="mywhite">Alumni Welfare</h1>
+        
+                            <p>
+        
+                                You can donate towards helping and empowering fellow alumni. This welfare kitty is set up to help those alumni in worst situations. The funds are ment to give loans or grant to this members so they can get out of a bad situation.
+        
+                            </p>
+        
+                            <button data-bs-target="#regModal" data-bs-toggle="modal">Check Now</button>
+        
+                        </div>
+        
+        
+        
+                        <div class="illustration">
+        
+                            <div class="inner"></div>
+                            <img src="https://i.ibb.co/pW2WrC6/Welfare.jpg" alt="Welfare" border="0" class="picha2">
+        
+                        </div>
+        
+                    </div>
+        
+        
+        
+                    <div class="box5 box">
+        
+                        <div class="bg"></div>
+        
+                        <div class="details">
+        
+                            <h1 class="mywhite">Give back to the school</h1>
+        
+                            <p>
+        
+                                These funds will be used to build or buy required equipments for the school.
+        
+                            </p>
+        
+                            <button data-bs-target="#regModal" data-bs-toggle="modal">Donate Now</button>
+        
+                        </div>
+        
+        
+        
+                        <div class="illustration">
+        
+                            <div class="inner"></div>
+        <img src="https://i.ibb.co/qybbfSq/Staff.jpg" alt="Staff" border="0" class="picha2">
+                        </div>
+        
+                    </div>
+        
+        
+        
+                </div>
+        
+        
+        
+                <svg xmlns="http://www.w3.org/2000/svg" class="prev" width="56.898" height="91" viewBox="0 0 56.898 91">
+                    <path d="M45.5,0,91,56.9,48.452,24.068,0,56.9Z" transform="translate(0 91) rotate(-90)" fill="#fff" /></svg>
+        
+                <svg xmlns="http://www.w3.org/2000/svg" class="next" width="56.898" height="91" viewBox="0 0 56.898 91">
+        
+                    <path d="M45.5,0,91,56.9,48.452,24.068,0,56.9Z" transform="translate(56.898) rotate(90)" fill="#fff" />
+        
+                    </svg>
+        
+                <div class="trail">
+        
+                    <div class="box1 active">1</div>
+        
+                    <div class="box2">2</div>
+        
+                    <div class="box3">3</div>
+        
+                    <div class="box4">4</div>
+        
+                    <div class="box5">5</div>
+        
+                </div>
+        
+            </div>
+            
+            <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+        
+            <!-- <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script> -->
+        
+        
+        
+            <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.2/gsap.min.js"></script> -->
+        
+                <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.2/CSSRulePlugin.min.js"></script> -->
+        
+            
+            
+            
+        <script src="js/Myjavascript.js"></script>
+        
+            </section>
+        
+    </div>
+</section>
+
+<section class="container myspaces">
+    <div class="three-columns align-items-center">
+        <div class="card-one">
+            <div class="imgBox">
+            <img src="images/classreps.png">
+                </div>
+            <div class="contentBox">
+            <h3>CLASS REPRESENTATIVE.</h3>
+            <a href="javascript:none" class="mybtn">Contact now</a>
+            <span></span>
+            </div>
+            </div>
+
+            <div class="card-one">
+                <div class="imgBox">
+                <img src="images/funtimes.png">
+                    </div>
+                <div class="contentBox">
+                <h3>FUN MOMENTS</h3>
+                
+                <a href="javascript:none" class="mybtn">View Now</a>
+                <span></span>
+                </div>
+                </div>
+
+                <div class="card-one">
+                    <div class="imgBox">
+                    <img src="images/schedule.png">
+                        </div>
+                    <div class="contentBox">
+                    <h3>OUR SCHEDULE</h3>
+                   
+                    <a href="javascript:none" class="mybtn">View Now</a>
+                    <span></span>
+                    </div>
+                    </div>
+            
+    </div>
+
+</section>
+
+<section>
+<div class="two-columns myspaces-one-small">
+
+    <div class="myspaces-pics">
+     <img src="images/stock.png" class="image-size image-fluid d-none disapear d-sm-block">
+    </div>
+
+    <div class="myspaces-two">
+        
+     <p class="display-4 "><strong>Post Your Portfolio. </p></strong>
+     <p class="display-4 "><strong> Here ! </p></strong>
+     <p class="lead">If your looking for a job,<br>
+        NKSSA has a vast network<br>
+        of various professsion<br>
+        and there is a great chance<br>
+        that once you join your employer<br>
+        can be a member or you can be reffered. </p>
+        <button class="btn  btn-lg btn-primary" type="button"style="background-color:#0275d8"
+        data-bs-toggle="modal" data-bs-target="#portfolio">View </button>
+     
+    </div>
+ 
+</div>
+
+</section>
+<section class="bg-primary">
+    <div class="two-columns">
+        <div class="myspaces-one">
+            <p class="display-4 text-light">Year Book<br>
+                Pictures of Alumni <br>
+                From all Years.</p>
+            <p class="lead text-light">See the faces of Alumni,<br>
+                from the Pioneers to date,<br>
+                update your own picture<br>
+                and your year of completion.<br>
+                 </p>
+               <button class="btn  btn-lg btn-primary" type="button"style="background-color: #6CF border-radius: 2rem;"
+               data-bs-toggle="modal" data-bs-target="#portfolio">View </button>
+           </div>
+       
+           <div class="myspaces-pics">
+               
+            
+               <img src="images/yearbk.png" class="image-size-two  d-none d-sm-block">
+           </div>
+       
+    </div>
+</section>
+<section>
+    <div class="myspaces">
+        <div class="container">
+
+            <div class="row justify-content-center"> 
+           
+            <div class="text-center">
+           
+           <p class="display-6 ">Success Stories</p>
+           
+           <div clas= "justify-content-center">
+           
+           <ul class="navbar nav">
+           <li class="nav-item">
+           
+           <a href="#" class="nav-link"> Bussiness</a></li>
+           
+           <li class="nav-item">
+           
+           <a href="#" class="nav-link">Proffesionals</a></li>
+           
+           <li class="nav-item">
+           
+           
+           <a href="#" class="nav-link">Talent</a></li>
+           
+           <li class="nav-item">
+           
+           
+           <a href="#" class="nav-link">Diaspora</a></li>
+           
+           </ul>
+           
+           </div>
+           
+    </div>
+</section>
+
+</body>
