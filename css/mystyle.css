@@ -85,3 +85,12 @@ button {
 	transform: translateY(-3%);
 	cursor: pointer;
 }
+
+.uno{
+float: left;
+width: 30%;
+}
+
+.seco{
+float: left;
+}
