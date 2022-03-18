@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<head>
+<title>Stories</title>
+	<link rel="stylesheet" href="css/mystyles-one.css">
+	<link rel="stylesheet" href="css/initialcards.css">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"   integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"/>
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+
+</script>
+
+
+
+<style>
+
+
+
+
+*{p
+
+  box-sizing: border-box;
+
+  font-family: 'Montserrat', sans-serif;
+
+  margin: 0;
+
+  padding: 0;
+
+}
+
+
+
+/* SECTION */
+
+section{
+
+  padding:0rem;
+
+}
+
+
+
+/* IMAGE */
+
+figure{
+
+  height: 20em;
+
+}
+
+.slide-img{
+
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: 20% 60%;
+
+  vertical-align: top;
+
+  width: 100%;
+  display: block;
+
+}
+
+
+
+/* TYPOGRAPHY */
+
+h1{
+
+  font-size: 4em;
+
+  letter-spacing: -.0875em;
+
+  line-height: .75;
+
+  margin-bottom: .25em;
+
+  text-transform: uppercase;
+
+  width: min-content;
+
+}
+
+p{
+
+  hyphens: auto;
+
+  line-height: 1.5;
+
+}
+
+
+
+/* EVENT TIME */
+
+time{
+
+  display: block;
+
+  font-size: 2em;
+
+  letter-spacing: -.025em;
+
+  margin-bottom: .5em;
+
+}
+
+
+
+/* EVENT ADDRESS */
+
+address{
+
+  font-size: 1em;
+
+  font-style: normal;
+
+  letter-spacing: -.0125em;
+
+  margin-bottom: 3em;
+
+  text-transform: uppercase;
+
+  width: min-content;
+
+}
+
+
+
+/** MEDIA QUERY **/
+
+@media only screen and (min-width: 540px){
+
+  /* SECTION */
+
+  section{
+
+    display: grid;
+
+    grid-column-gap: 2em;
+
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+
+}
+
+
+
+/** MEDIA QUERY **/
+
+@media only screen and (min-width: 760px){
+
+  /* HEADER */
+
+  header{
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 2fr);
+    
+    
+
+  }
+
+  
+
+  /* SECTION */
+
+  section{
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    min-height: 100vh;
+
+  }
+
+  
+
+  /* IMAGE */
+
+  figure{
+
+    height: auto;
+
+  }
+
+  .slide-img{
+
+    object-position: 43% 100%;
+
+  }
+
+  
+
+  /* TYPOGRAPHY */
+
+  h1{
+
+    font-size: 5em;
+
+  }
+
+}
+
+
+
+/** MEDIA QUERY **/
+
+@media only screen and (min-width: 1024px){
+
+  /* SECTION */
+
+  .mysection{
+
+    padding: 4rem;
+
+  }
+
+  
+
+  /* IMAGE */
+
+  .slide-img{
+
+    object-position: 34% 100%;
+
+  }
+
+  
+
+  /* TYPOGRAPHY */
+
+  h1{
+
+    font-size: 6em;
+
+  }
+
+}
+
+
+
+/** MEDIA QUERY **/
+
+@media only screen and (min-width: 1280px){
+
+  /* IMAGE */
+
+  .slide-img{
+
+    object-position: 23% 100%;
+
+  }
+
+  
+
+  /* TYPOGRAPHY */
+
+  h1{
+
+    font-size: 7em;
+
+  }
+
+}
+
+
+
+/** MEDIA QUERY **/
+
+@media only screen and (min-width: 1920px){
+
+  /* ROOT */
+
+  html{
+
+    font-size: 1.25rem;
+
+  }
+
+  
+
+
+
+}
+
+.mySlides{
+  display:none;
+  
+  align-content: center;
+}
+
+
+
+</style>
+
+
+
+</head>
+
+<body style="padding:  0;">
+
+<nav class="navbar navbar-expand-lg bg-primary navbar-dark navbar-right " style="padding: -5;">
+
+	<div class="container">
+
+		<img src="images/logo.png" width="95" class="img-set">
+
+		<a class="navbar-brand" href="#">
+
+		</a>
+
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+			<span class="navbar-toggler-icon"></span> </button>
+
+		<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+
+			<ul class="navbar-nav text-light">
+
+
+
+				<li class="nav-item"> <a class="nav-link active" href="landing.html">Home</a> </li>
+
+				<li class="nav-item"> <a class="nav-link" href="about.html">About Us</a> </li>
+
+				<li class="nav-item"> <a class="nav-link" href="Contact.html">Contact Us</a> </li>
+
+				<li class="nav-item"> <a class="nav-link" href="#">Our Activities</a> </li>
+
+			</ul>
+
+			</ul>
+			<ul class="navbar-nav">
+
+
+
+			</ul>
+
+		</div>
+
+	</div>
+
+
+</nav>
+
+
+
+<header>
+
+	<figure class="carousel">
+
+		
+
+ <img class="mySlides slide-img" src="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260" alt="">
+
+  
+ <img class="mySlides slide-img" src=" https://images.pexels.com/photos/1314550/pexels-photo-1314550.jpeg?jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260" alt="">
+
+  
+ <img class="mySlides slide-img" src="https://images.pexels.com/photos/208984/pexels-photo-208984.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260" alt="">
+
+  
+ <img class="mySlides slide-img" src=" https://images.pexels.com/photos/1687831/pexels-photo-1687831.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260" alt="">
+
+  
+<img class="mySlides  slide-img" src="https://images.pexels.com/photos/208773/pexels-photo-208773.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260" alt="">
+
+ 
+
+
+
+
+	
+
+  </figure>
+
+		<section class="mysection">
+<br>
+			<br>
+			<h1>Amos Omondi Ochieng</h1>
+
+			<div>
+
+			<p><b>Year 2008</b></p>
+			<p><b>Bussinessman</b></p>
+
+				<p><b>Bussiness name: </b> Spice Your Life</p>
+<br />
+				<p>Here you have more information about this big summit lorem ipsum dolor sit amet consectetur
+
+					adipisicing elit ipsam, incidunt labore perspiciatis ipsa vel obcaecati totam maiores voluptatibus
+
+					ducimus dolore maxime elit ipsam.</p>
+
+			</div>
+
+		</section>
+
+</header>
+
+<script>
+var myIndex = 0;
+carousel();
+function carousel(){
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+   for(i = 0; i < x.length; i++){
+       
+       
+      x[i].style.display = "none";
+   }
+   myIndex++;
+   if(myIndex > x.length){
+     myIndex = 1;
+   }
+   x[myIndex - 1].style.display = "block";
+   setTimeout(carousel, 1000);
+}
+</script>
+</body>
+

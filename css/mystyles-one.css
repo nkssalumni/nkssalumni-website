@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+ html{
+	 Scroll-behavior: smooth;
+ }
 body{
-	
+
   scroll-behavior: smooth;
   font-family: 'Ubuntu', sans-serif;
 
@@ -665,7 +669,7 @@ width: 40%;
 }
 
 	
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 678px) {
 
 	 .myslider {
 
@@ -689,10 +693,26 @@ width: 75%;
 width: 80%;
 }
 
-}
+.mymain{
+display: block;
+margin: auto;
+clear: left	;
+justify-items: center;
+
 	
+}
+.icon-size
+{
+	width: 5%;
 
+}
+.mypad
+{
+	padding: 10%;
+	
+}
 
+}
 
  @media only screen and (min-width: 769px) {
 
@@ -719,7 +739,39 @@ width: 75%;
   
 width: 80%;
 }
+.mymain{
+display: flex;	
+gap: 10%;
+margin: 3% 20% 10% 5%;
+	
+}
+.Image-padding{
+	margin-left: 2%;
+
+	
+}
+.icon-size
+{
+	width: 80%;
+
+}
 }
 
 
+.myicons{
+display: flex;	
+
 	
+}
+
+Image-pd-two{
+margin: -15;
+	
+}
+.mytext{
+
+
+	 font-size: 80%;
+
+}
+}
