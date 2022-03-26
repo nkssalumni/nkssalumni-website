@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 
  html{
 	 Scroll-behavior: smooth;
@@ -9,17 +9,22 @@ body{
   font-family: 'Ubuntu', sans-serif;
 
 }
+.myblue-button{
+
+background-color: #6F6;
+border-radius: 20%;
+
+
+}
 	*, *:before, *:after {
 		margin:0;
 		padding:0;
 		box-sizing: inherit;
 	}
 
-.myblue-button{
-
-background-color: #e7e7e7;
-border-radius: 2rem;
-
+@mixin display-grid {
+  display: -ms-grid;
+  display: grid;
 }
 
  html {
@@ -106,7 +111,7 @@ font-family: 'Ubuntu', sans-serif;
 
 
  .myslider .box {
-
+ @include display-grid;
 	 height: 100%;
 
 	 width: 100%;
@@ -126,7 +131,7 @@ font-family: 'Ubuntu', sans-serif;
  @media only screen and (max-width: 650px) {
 
 	 .myslider .box {
-
+ @include display-grid;
 		 grid-template-columns: 1fr;
 
 		 grid-template-rows: repeat(2, 1fr);
@@ -239,7 +244,7 @@ font-family: 'Ubuntu', sans-serif;
  @media only screen and (max-width: 650px) {
 
 	 .myslider .box .details {
-
+       @include display-grid;
 		 grid-row: 2 / span 1;
 
 		 grid-column: -1;
@@ -595,7 +600,7 @@ oretransform {
 }
 
  .trail {
-
+ @include display-grid;
 	 bottom: 5%;
 
 	 left: 50%;

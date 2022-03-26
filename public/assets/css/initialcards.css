@@ -2,6 +2,10 @@
  html{
 	 Scroll-behavior: smooth;
  }
+ @mixin display-grid {
+  display: -ms-grid;
+  display: grid;
+}
  
 *{
   font-family: 'Poppins', sans-serif;
@@ -129,6 +133,7 @@ animation: wiggle 2.5 infinite;
 }
 
 .three-columns{
+	@include display-grid;
 display: grid;
 gap: 1rem;
 grid-template-columns: repeat(3, 1fr);
@@ -143,6 +148,7 @@ transform: translate(2%, 2%);
 }
 
 .two-columns{
+	 @include display-grid;
 display: grid;
 gap: 1rem;
 grid-template-columns: repeat(2, 1fr);
@@ -159,6 +165,7 @@ transform: translate(2%, 2%);
  @media only screen and (max-width: 650px) {
 
 	.three-columns{
+		 @include display-grid;
 display: grid;
 gap: 1rem;
 grid-template-columns: repeat(1, 1fr);
@@ -170,6 +177,7 @@ transform: translate(10%, 10%);
     padding: 0;
 }
 .two-columns{
+	 @include display-grid;
 display: grid;
 gap: 1rem;
 grid-template-columns: repeat(1, 1fr);
