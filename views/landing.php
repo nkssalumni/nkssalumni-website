@@ -225,7 +225,7 @@
       <div class="three-columns align-items-center">
           <div class="card-one">
               <div class="imgBox">
-              <img src="images/classreps.png">
+              <img src="assets/images/classreps.png">
                   </div>
               <div class="contentBox">
               <h3>CLASS REPRESENTATIVE.</h3>
@@ -236,7 +236,7 @@
 
               <div class="card-one">
                   <div class="imgBox">
-                  <img src="images/funtimes.png">
+                  <img src="assets/images/funtimes.png">
                       </div>
                   <div class="contentBox">
                   <h3>FUN MOMENTS</h3>
@@ -248,7 +248,7 @@
 
                   <div class="card-one">
                       <div class="imgBox">
-                      <img src="images/schedule.png">
+                      <img src="assets/images/schedule.png">
                           </div>
                       <div class="contentBox">
                       <h3>OUR SCHEDULE</h3>
