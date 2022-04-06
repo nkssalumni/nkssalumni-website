@@ -5,8 +5,7 @@ const slider = document.querySelector(".myslider")
 
 // All trails 
 
-const trail = document.querySelector(".trail").querySelectorAll("div")
-
+const trail = document.querySelector(".trail").querySelectorAll("div:not(:hover)");
 
 
 // Transform value

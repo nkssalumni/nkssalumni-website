@@ -67,7 +67,7 @@ animation: wiggle 2.5 infinite;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 50px;
   z-index: 1;
 }
  
@@ -190,10 +190,10 @@ transform: translate(2%, 2%);
 
 .image-size{
 	
-width:120%;
+width:140%;
 }
 .myspaces{
-	padding: 10rem;
+	padding: 15rem;
 }
 .myspaces-pics{
 	padding: -2rem;

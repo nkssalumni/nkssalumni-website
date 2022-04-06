@@ -58,9 +58,9 @@
             <li class="nav-item"> <a class="nav-link" href="/our-activities">Our Activities</a> </li>
           </ul>
           <ul class="navbar-nav">
-            <div>
-              <button class="btn btn-md text-light" style="background-color:#00BFFF;" type="button" data-toggle="modal" data-target="#regModal"  > Register </button>
-              <button class="btn btn-md text-light"  style="background-color:#00BFFF;" type="button"  data-toggle="modal" data-target="#loginModal">Login </button>
+            <div class="bad">
+              <a class="btn btn-md text-light" style="background-color:#00BFFF;"  data-toggle="modal" data-target="#regModal"  > Register </a>
+              <a class="btn btn-md text-light"  style="background-color:#00BFFF;"   data-toggle="modal" data-target="#loginModal">Login </a>
             </div>
           </ul>
         </div>
@@ -105,10 +105,10 @@
   <!-- This section contain introduction -->
  <section>
      <div>
-         <div class="mypadding" >
-             <div class="mycontainer">
-                 <div class="myslider">
-                     <div class="box1 box">
+         <div class="mypadding " >
+             <div class="mycontainer ">
+                 <div class="myslider ">
+                     <div class="box1 box lop">
                          <div class="bg"></div>
                          <div class="details">
                              <h1 class="mywhite">Did you go NKSS?</h1>
@@ -129,7 +129,7 @@
                          <div class="details">
                              <h1 class="mywhite" >Join our Network.</h1>
                              <p>
-                                 We have alot of proffestionals, bussinesspersons and talents amonst us, who give a diverse and rich pool for  beggining  your network for future fruitful reslust.
+                                 We have a lot of professionals, businesspersons and talents amongst us, who give a diverse and rich pool for  beginning  your network for future fruitful reslust.
                              </p>
                              <button data-target="#regModal" data-toggle="modal" >Join Us</button>
                          </div>
@@ -143,7 +143,7 @@
                          <div class="bg"></div>
                             <div class="details">
                              <h1 class="mywhite">Let's catch up</h1>
-                                <p> We usually have meetings that happens occationally, where you can meet fellow alumni interact and catch up.
+                                <p> We usually have meetings that happens occasionally, where you can meet fellow alumni interact and catch up.
                                  </p>
                                  <button data-target="#regModal" data-toggle="modal" >Join Us</button>
                                 </div>
@@ -308,8 +308,8 @@
 
 
   <!--this section contain the icons -->
-  <section class="container myspaces">
-      <div class="three-columns align-items-center">
+  <section class="myspaces">
+      <div class="three-columns align-items-center ">
           <div class="card-one">
               <div class="imgBox">
               <img src="assets/images/classreps.png">
@@ -359,16 +359,16 @@
 
       <div class="myspaces-two">
 
-       <p class="display-4 text-dark">Post Your Portfolio. </p>
-       <p class="display-4 text-dark ">Here ! </p>
-       <p class="lead text-dark">If your looking for a job,<br>
+       <text class="display-4 text-dark">Post Your Portfolio. </text><br>
+       <text class="display-4 text-dark ">Here ! </text><br>
+       <text class="lead text-dark">If your looking for a job,<br>
           NKSSA has a vast network<br>
-          of various professsion<br>
+          of various profession<br>
           and there is a great chance<br>
           that once you join your employer<br>
-          can be a member or you can be reffered. </p>
-          <button class="btn  btn-lg btn-primary" type="button"style="background-color:#0275d8"
-          data-toggle="modal" data-target="#regModal">View </button>
+          can be a member or you can be reffered. </text> <br> <br>
+          <a class="btn  btn-lg btn-primary" style="background-color:#0275d8"
+          data-toggle="modal" data-target="#regModal">View </a>
 
       </div>
   </div>
@@ -382,16 +382,16 @@
  <section class="bg-primary">
      <div class="two-columns">
          <div class="myspaces-one">
-             <p class="display-4 text-light">Year Book<br>
+             <text class="display-4 text-light">Year Book<br>
                  Pictures of Alumni <br>
-                 From all Years.</p>
-             <p class="lead text-light">See the faces of Alumni,<br>
+                 From all Years.</text><br>
+             <text class="lead text-light">See the faces of Alumni,<br>
                  from the Pioneers to date,<br>
                  update your own picture<br>
                  and your year of completion.<br>
-                  </p>
-           <button class="btn  btn-lg myblue-button" type="button"
-                    data-toggle="modal" data-target="#regModal">View </button>
+                  </text><br>
+           <a class="btn  btn-lg myblue-button"
+                    data-toggle="modal" data-target="#regModal">View </a>
 
             </div>
 
@@ -408,13 +408,13 @@
   <!--success stories --->
  <section>
      <div class="myspaces">
-         <div class="container">
+         <div class=" ">
 
              <div class="row justify-content-center">
 
              <div class="text-center">
 
-            <p class="display-4 text-dark">Success Stories</p>
+            <text class="display-4 text-dark">Success Stories</text>
 
             <div clas= "justify-content-center">
 
@@ -422,29 +422,29 @@
             <li class="nav-item">
 
             <a href="#" class="nav-link">
-                <img src="assets/images/business.png">
+                <img src="assets/images/business.png"><br>
 
-                <p class="lead">Bussiness </p></a></li>
+                <text class="lead">Bussiness </text></a></li>
 
             <li class="nav-item">
 
             <a href="#" class="nav-link">
-                <img src = "assets/images/pro.png">
-                <p class="lead">Proffesionals</p></a></li>
-
-            <li class="nav-item">
-
-
-            <a href="#" class="nav-link">
-                <img src = "assets/images/talent.png" class="wiggle">
-                <p class="lead">Talent</p></a></li>
+                <img src = "assets/images/pro.png"><br>
+                <text class="lead">Proffesionals</text></a></li>
 
             <li class="nav-item">
 
 
             <a href="#" class="nav-link">
-                <img src="assets/images/diaspora.png" class="wiggle">
-               <p class="lead"> Diaspora </p></a></li>
+                <img src = "assets/images/talent.png" class="wiggle"><br>
+                <text class="lead">Talent</text></a></li>
+
+            <li class="nav-item">
+
+
+            <a href="#" class="nav-link">
+                <img src="assets/images/diaspora.png" class="wiggle"><br>
+               <text class="lead"> Diaspora </text></a></li>
 
             </ul>
 
@@ -460,22 +460,22 @@
  <img src="assets/images/logo.png" width="20%">
  <br>
  <br>
- <p>Nkaimurunya secondary school alumni assosiation <br>is a registered community based organisation that strive to <br>
-     unite all alumni of Nkaimurunya Secondary school.  </p>
- <p>Join us there got to be more of us.</p>
+ <text class="lead">Nkaimurunya secondary school alumni association is a registered community based organisation that strive to
+     unite all alumni of Nkaimurunya Secondary school.  </text><br><br>
+ <text class="lead">Join us there got to be more of us.</text>
  </div>
  <br>
  <br>
  <div>
- <h5><strong>Contact us</h5></strong>
- <p>Telephone: 0726696759</p>
- <p>email: nkaimurunyaalumni@gmail.com</p>
+ <text class="Display-6"><strong>Contact us</h5></strong><br>
+ <text>Telephone: <br>0726696759</text><br>
+ <text>email: nkaimurunyaalumni@gmail.com</text>
  </div>
  <br>
  <br>
 
  <div>
- <h5><strong>Follow us</h5></strong>
+ <text class="Display-6"><strong>Follow us</text></strong>
  <br>
 
  <div class="mymain">
