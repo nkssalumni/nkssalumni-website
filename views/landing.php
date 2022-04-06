@@ -220,6 +220,90 @@
 
 
              </section>
+            </section>
+             <section>
+              <!-- Modal -->
+                <div class="modal fade" id="regModal" tabindex="-1" aria-labelledby="portModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-xl modal-dialog-scrollable">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h2 class="modal-title display-6" >Join Alumni Association </h2>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="container-fluid">
+                          <p class="lead text-dark">Your Details: </p>
+                          <form method="post" >
+                            <?php echo $message;?>
+                            <div class="container">
+                            <div id = "response"></div>
+                            <label for="firstname" class="form-text text-dark">First Name:</label>
+                            <input type="text" class="form-control" id="firstname"/>
+                            <label for="secondname" class="form-text text-dark">Second Name:</label>
+                            <input type="text" class="form-control" id="secondname"/>
+                            <label for="phonenumber" class="form-text text-dark">Phone Number:</label>
+                            <input type="tel" name="phonenumber" class="form-control" id="phonenumber"/>
+                            <label for="email" class="form-text text-dark">Email:</label>
+                            <input type="text" class="form-control text-dark" id="email"/>
+                            <label for="password" class="form-text text-dark">Password:</label>
+                            <input type="password" class="form-control" id="password"/>
+                            <label for="confirmPassword" class="form-text text-dark">Confirm Password:</label>
+                            <input type="password" class="form-control" id="confirmPassword"/>
+                            <label class="form-text text-dark"  for="years">Year:</label>
+                            <select id="years" class="custom-select">
+                              <option selected>Choose...</option>
+                              <option value="2008"> 2008 </option>
+                              <option value="2009"> 2009 </option>
+                              <option value="2010"> 2010 </option>
+                              <option value="2011"> 2011 </option>
+                              <option value="2012"> 2012 </option>
+                              <option value="2013"> 2013</option> 
+                              <option value="2014"> 2014 </option>        
+                              <option value="2015"> 2015</option>
+                              <option value="2016"> 2016 </option>
+                              <option value="2017"> 2017 </option>
+                              <option value="2018"> 2018 </option>
+                              <option value="2019"> 2019</option>
+                              <option value="2020"> 2020 </option>
+                              <option value="2021"> 2021</option>
+                              <option value="2022"> 2022 </option>
+                            </select>
+                            <br/><br/><br/>
+                            <hr class="hrOriz">
+                            <p class="lead text-dark">Type of Membership:</p>
+                            <div class= "membership">
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" name = "membership" type="radio" id="inlineCheckbox1" value="ordinary">
+                                <label class="form-check-label text-dark" for="inlineCheckbox1">Ordinary</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" name = "membership" type="radio" id="inlineCheckbox2" value="executive">
+                                <label class="form-check-label text-dark" for="inlineCheckbox2">Executive</label>
+                              </div>
+                            </div>
+                            <br /><br />
+                            <hr class="hrOriz">
+                            <p class="text-dark"> Note: For ordinary membership you will be required to pay a registration fee of Ksh 300 and yearly subscription of Ksh 1200.</p>
+                              <br />
+                            <p class="text-dark"> For Exercutive Membership you will be required to pay a registration fee of ksh 1000 and a yearly subscription of Ksh 2500. </p>
+                              </div>
+                            <br/><br />
+                          </div>
+                          <br />
+                        </div>
+                        <div class="modal-footer">
+                          <button class="btn bg-secondary text-light"> Close </button>
+                          <button class="btn bg-primary text-light" id = "register-form"> Submit </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+
   <!--this section contain the icons -->
   section class="container myspaces">
       <div class="three-columns align-items-center">
@@ -381,8 +465,8 @@
  <br>
  <div>
  <h5><strong>Contact us</h5></strong>
- <p>Telephone: 07075868</p>
- <p>email: nkssa@gmail.com</p>
+ <p>Telephone: 0726696759</p>
+ <p>email: nkaimurunyaalumni@gmail.com</p>
  </div>
  <br>
  <br>
@@ -422,88 +506,7 @@
  <hr>
  <br>
      <br>
- </section>
- <section>
-  <!-- Modal -->
-    <div class="modal fade" id="regModal" tabindex="-1" aria-labelledby="portModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-xl modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h2 class="modal-title display-6" >Join Alumni Association </h2>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="container-fluid">
-              <p class="lead text-dark">Your Details: </p>
-              <form method="post" >
-                <?php echo $message;?>
-                <div class="container">
-                <div id = "response"></div>
-                <label for="firstname" class="form-text text-dark">First Name:</label>
-                <input type="text" class="form-control" id="firstname"/>
-                <label for="secondname" class="form-text text-dark">Second Name:</label>
-                <input type="text" class="form-control" id="secondname"/>
-                <label for="phonenumber" class="form-text text-dark">Phone Number:</label>
-                <input type="tel" name="phonenumber" class="form-control" id="phonenumber"/>
-                <label for="email" class="form-text text-dark">Email:</label>
-                <input type="text" class="form-control text-dark" id="email"/>
-                <label for="password" class="form-text text-dark">Password:</label>
-                <input type="password" class="form-control" id="password"/>
-                <label for="confirmPassword" class="form-text text-dark">Confirm Password:</label>
-                <input type="password" class="form-control" id="confirmPassword"/>
-                <label class="form-text text-dark"  for="years">Year:</label>
-                <select id="years" class="custom-select">
-                  <option selected>Choose...</option>
-                  <option value="2008"> 2008 </option>
-                  <option value="2009"> 2009 </option>
-                  <option value="2010"> 2010 </option>
-                  <option value="2011"> 2011 </option>
-                  <option value="2012"> 2012 </option>
-                  <option value="2013"> 2013</option> 
-                  <option value="2014"> 2014 </option>        
-                  <option value="2015"> 2015</option>
-                  <option value="2016"> 2016 </option>
-                  <option value="2017"> 2017 </option>
-                  <option value="2018"> 2018 </option>
-                  <option value="2019"> 2019</option>
-                  <option value="2020"> 2020 </option>
-                  <option value="2021"> 2021</option>
-                  <option value="2022"> 2022 </option>
-                </select>
-                <br/><br/><br/>
-                <hr class="hrOriz">
-                <p class="lead text-dark">Type of Membership:</p>
-                <div class= "membership">
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" name = "membership" type="radio" id="inlineCheckbox1" value="ordinary">
-                    <label class="form-check-label text-dark" for="inlineCheckbox1">Ordinary</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" name = "membership" type="radio" id="inlineCheckbox2" value="executive">
-                    <label class="form-check-label text-dark" for="inlineCheckbox2">Executive</label>
-                  </div>
-                </div>
-                <br /><br />
-                <hr class="hrOriz">
-                <p class="text-dark"> Note: For ordinary membership you will be required to pay a registration fee of Ksh 300 and yearly subscription of Ksh 1200.</p>
-                  <br />
-                <p class="text-dark"> For Exercutive Membership you will be required to pay a registration fee of ksh 1000 and a yearly subscription of Ksh 2500. </p>
-                  </div>
-                <br/><br />
-              </div>
-              <br />
-            </div>
-            <div class="modal-footer">
-              <button class="btn bg-secondary text-light"> Close </button>
-              <button class="btn bg-primary text-light" id = "register-form"> Submit </button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
+
 
 
   <script src="assets/3rdparties/jquery/jquery.js"></script>
