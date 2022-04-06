@@ -50,12 +50,12 @@
             <li class="nav-item"> <a class="nav-link" href="/contact-us">Contact Us</a> </li> 
             <li class="nav-item"> <a class="nav-link" href="/our-activities">Our Activities</a> </li>
           </ul>
-          <ul class="navbar-nav">
+          <!-- <ul class="navbar-nav">
             <div>
               <button class="btn btn-md text-light" style="background-color:#00BFFF;" type="button" data-toggle="modal" data-target="#regModal"  > Register </button>
               <button class="btn btn-md text-light"  style="background-color:#00BFFF;" type="button"  data-toggle="modal" data-target="#loginModal">Login </button>
             </div>
-          </ul>
+          </ul> -->
         </div> 
       </div>
     </nav>

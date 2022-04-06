@@ -29,11 +29,14 @@
 
     <!--custom css -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-     <link rel="stylesheet" type="text/css" href="assets/css/mystyles-one.css">
-      <link rel="stylesheet" type="text/css" href="assets/css/initialcards.css">
-  <script src="assets/js/Myjavascript.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/mystyles-one.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/initialcards.css">
 
-            <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+    <!-- JS -->
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+    <script src="assets/js/MyJavascript.js"></script>
+
+            
     <title>NKSSAA</title>
   </head>
 </head>
@@ -204,7 +207,7 @@
 
              </div>
 
-             <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+           
 
              <!-- <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script> -->
 
@@ -221,7 +224,7 @@
 
              </section>
   <!--this section contain the icons -->
-  section class="container myspaces">
+  <section class="container myspaces">
       <div class="three-columns align-items-center">
           <div class="card-one">
               <div class="imgBox">
@@ -516,7 +519,7 @@
       initialCountry: "auto",
         geoIpLookup: function(callback) {
           $.get('https://ipinfo.io?token=2433f368462b55', function() {}, "jsonp").always(function(resp) {
-            var countryCode = (resp && resp.country) ? resp.country : "";
+            var countryCode = (resp && resp.country) ? resp.country : "KE";
             callback(countryCode);
           });
         }
@@ -710,7 +713,7 @@
             });
         });
   </script>
-  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+ 
 
 
 
