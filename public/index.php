@@ -41,7 +41,6 @@ $app->router->post('/password-reset', [AuthController::class, 'passwordResetPost
 
 $app->router->get('/meeting', [ZoomController::class, 'liveMeeting']);
 $app->router->get('/payments', [PesapalController::class, 'iframe']);
-$app->router->get('/buy-item', [PesapalController::class, 'iframeShop']);
 $app->router->get('/payment-verification', [PesapalController::class, 'verifyPayment']);
 $app->router->get('/item-purchase-verification', [PesapalController::class, 'verifyItemPayment']);
 $app->router->get('/ipn-listener', [PesapalController::class, 'ipnListener']);

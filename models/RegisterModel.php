@@ -191,7 +191,7 @@ class RegisterModel extends Model
 	    					<div class = "container">
 	    						<div class = "row">
 	    							<div class = "col-sm-12 col-lg-12 col-md-12 d-flex justify-content-left mt-5">
-	    								Hello '.$mj_to_name.'<br>Use the link below to activate your account. The link shall expire in 3 hours<br>Account Activation link : http://localhost:9000/activate-account?token='.$token.'&email='.$mj_to_email.'
+	    								Hello '.$mj_to_name.'<br>Use the link below to activate your account. The link shall expire in 3 hours<br>Account Activation link : https://nkssalumni.org/activate-account?token='.$token.'&email='.$mj_to_email.'
 	    							</div>
 	    						</div>
 	    					</div>
