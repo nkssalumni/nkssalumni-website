@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     
@@ -137,18 +137,7 @@
 
 
     <script>  
-      function large(id)
-      {  
-        img = document.getElementById(id);
-        img.style.transform="scale(1.5)";
-        img.style.transition= "transform 0.25 ease";
-        img.style.width= '40%';
-        img.style.position = "absolute";
-        img.style.left='30%';
-        img.style.top='60%';
-        img.classList.add("kati");
-          
-      }
+      
       function small(id)
       {     
         img=document.getElementById(id);
