@@ -233,12 +233,29 @@
 						<strong>Year</strong>
 						<small>2013</small>
 					</div>
+
 				</div>
 			</div>
+			<div class="profile-card">
+            				<i class="fas fa-ellipsis-v"></i>
+            				<img class="profile-picture" src="assets/images/mulili.jpg" height="80px" width="80px" alt=''></img>
+            				<h2 class="profile-name">Anthony Mulili</h2>
+            				<div class="profile-work">
+            					<div class="profile-projects text-light">
+            						<strong>Position</strong>
+            						<small>Vice Organizing Secretary</small>
+            					</div>
+            					<div class="profile-prototypes text-light">
+            						<strong>Year</strong>
+            						<small>2010</small>
+            					</div>
 		</div>
 	</section>
 
-
+<br>
+<br>
+<br>
+<br>
 	<section>
 		<div class=" bg-primary bottom d-none d-sm-block  ">
 <section class="mypad"style="background-color: dimgrey;">
