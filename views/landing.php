@@ -328,7 +328,7 @@
                   <div class="contentBox">
                   <h3>FUN MOMENTS</h3>
 
-                  <a href="javascript:none" class="mybtn">View Now</a>
+                  <a href="/our-activities" class="mybtn">View Now</a>
                   <span></span>
                   </div>
                   </div>
@@ -480,7 +480,8 @@
 
  <div class="mymain">
 
-         <a href="#" >
+         <a href="https://www.facebook.com/groups/297221350309250/?ref=share
+" >
      <img src="assets/images/facebook.png"class=" icon-size"></a>
 
 
@@ -494,7 +495,7 @@
              <img src="assets/images/insta.png" class=" icon-size"> </a>
 
 
-         <a href="#">
+         <a href="https://chat.whatsapp.com/BO1Nu49LpXuEmIR0ciXFLc">
              <img src="assets/images/whatsapp.png"  class=" icon-size"></a>
 
      </div>
@@ -510,7 +511,7 @@
  <br>
      <br>
 
-
+</section>
 
   <script src="assets/3rdparties/jquery/jquery.js"></script>
   <script src = "assets/3rdparties/bootstrap/js/bootstrap.js"></script>

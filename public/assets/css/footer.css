@@ -1,0 +1,56 @@
+
+ @media only screen and (min-width: 769px) {
+
+	 .myslider .illustration div {
+
+		 height: 0rem;
+
+		 width: 0rem;
+
+	}
+
+
+.picha1{
+  
+width: 75%;
+}
+.picha2{
+  
+width: 80%;
+}
+.mymain{
+display: flex;	
+gap: 10%;
+margin: 3% 20% 10% 5%;
+	
+}
+.Image-padding{
+	margin-left: 2%;
+
+	
+}
+.icon-size
+{
+	width: 100%;
+
+}
+}
+
+
+.myicons{
+display: flex;	
+
+	
+}
+
+Image-pd-two{
+margin: -15;
+	
+}
+.mytext{
+
+
+	 font-size: 80%;
+
+}
+}
