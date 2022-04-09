@@ -19,8 +19,8 @@ class PesapalController
 	private $consumer_key;
 	private $consumer_secret;
 	public $iframelink = 'https://www.pesapal.com/API/PostPesapalDirectOrderV4';
-	//public $callback_url = 'https://beyond-grades.com/payment-verification';
-	public $callback_url = 'http://localhost:9000/payment-verification';
+	public $callback_url = 'https://nkssalumni.org/payment-verification';
+	//public $callback_url = 'http://localhost:9000/payment-verification';
 	public $statusrequestAPI = 'https://www.pesapal.com/API/querypaymentdetails';
 	public PesapalModel $pesapalModel;
 
