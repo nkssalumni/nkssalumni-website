@@ -297,7 +297,7 @@
                           <br />
                         </div>
                         <div class="modal-footer">
-                          <button class="btn bg-secondary text-light"> Close </button>
+                          <button class="btn bg-secondary text-light" data-dismiss="modal" aria-label="Close"> Close </button>
                           <button class="btn bg-primary text-light" id = "register-form"> Submit </button>
                         </div>
                       </form>
@@ -687,7 +687,7 @@
                     }else if(response.message === 'success'){
                      
                       
-                            window.location = "/";
+                            window.location = "/dashboard";
                           
                           
                     }

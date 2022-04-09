@@ -125,8 +125,12 @@ class LoginModel extends Model
             // Store data in session variables
             $_SESSION["id"] = $row['id'];
             $_SESSION["email"] = $email;
+			$_SESSION["fname"] = $row['firstname'];
+			$_SESSION["sname"] = $row['secondname'];
             $_SESSION["name"] = $row['firstname'].' '.$row['secondname'];
+			$_SESSION["phonenumber"] = $row['phonenumber'];
             $_SESSION['loggedin'] = true;
+			$_SESSION['membership'] = $row['membership'];
             if ($type === 1){
             	$_SESSION["type"] = 'admin';
             }else if($type === 2){

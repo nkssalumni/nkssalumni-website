@@ -117,7 +117,7 @@ class PasswordRecovery extends Model
 	    // generate serial
 	    $serial = md5($id. ' '.time());
 
-	    $mj_html = 'Hello '.$mj_to_name.'<br>Use the link below to reset your password. The link shall expire in 3 hours<br>Password reset link : http://localhost:9000/password-reset?rst='.$serial;
+	    $mj_html = 'Hello '.$mj_to_name.'<br>Use the link below to reset your password. The link shall expire in 3 hours<br>Password reset link : https://nkssalumni.org/password-reset?rst='.$serial;
 
 
 	    if($this->insertRecoveryData($serial, (int)$id)){

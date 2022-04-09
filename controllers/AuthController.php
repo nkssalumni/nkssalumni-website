@@ -33,7 +33,7 @@ class AuthController
 			$csrf_token =  $this->csrf->set_csrf();
 			$body = Application::$app->request->getBody();
 			if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-			   	Application::$app->request->redirect('/admin-dashboard');
+			   	Application::$app->request->redirect('/dashboard');
 			}else{
 				return Application::$app->router->renderView('login', ['message' => $csrf_token, 'returnurl' => '<input type="hidden" id = "returnurl" name="returnurl" value="'.$body['returnurl'].'">']);
 				}
@@ -281,7 +281,7 @@ class AuthController
 		if($method === 'get'){
 			$body = Application::$app->request->getBody();
 			if(!$body['returnurl']){
-				Application::$app->request->redirect('/sign-in');
+				Application::$app->request->redirect('/');
 				exit();
 			}else{
 				Application::$app->request->redirect($body['returnurl']);

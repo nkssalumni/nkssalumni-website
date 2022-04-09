@@ -5,6 +5,7 @@ require_once __DIR__.'/../vendor/mailjet/vendor/autoload.php';
 
 use app\controllers\PagesController; 
 use app\controllers\AdminController;
+use app\controllers\UserController;
 use app\controllers\MailController;
 use app\controllers\AuthController;
 use app\controllers\MealsController;
@@ -31,6 +32,9 @@ $app->router->post('/register', [AuthController::class, 'registerPost']);
 $app->router->get('/activate-account', [AuthController::class, 'accountGet']);
 $app->router->get('/resend-activation-link', [AuthController::class, 'resendActivationLink']);
 $app->router->get('/logout', [AuthController::class, 'logout']);
+
+$app->router->get('/dashboard', [UserController::class, 'userDashboard']);
+
 
 
 

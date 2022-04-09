@@ -25,8 +25,8 @@ class PesapalController
 	public PesapalModel $pesapalModel;
 
 	public function __construct(){
-		$this->consumer_key = 'Vx4ruk/FTZTHd8rvD2c2zd1y0rFN9HRo';
-		$this->consumer_secret = 's1BurpLKKfjYCxVkFPiWGBI42qU=';
+		$this->consumer_key = 'o3d8dbGIR2fN/qQHkNjCZX/4CrUlfV7T';
+		$this->consumer_secret = 'vfVpI3/U9skjKkMwxTSz2fTN4w0=';
 		$this->pesapalModel = new PesapalModel();
 		require __DIR__.'/../api/OAuth/OAuth.php';
 		
@@ -43,81 +43,24 @@ class PesapalController
 		    exit;
 		}
 		
-		$desc = 'BeyondGrades Course Registration Payment';
+		$desc = 'NKSS Alumni Registration Payment';
 		$type = 'MERCHANT';
 		$reference = time();
 		$this->email = $_SESSION['email'];
 		$body = $this->pesapalModel->getUserDetails($this->email);
 	
-		$this->first_name = 'Maxwell';
-		$this->last_name = 'Mwangi';
-		$this->email = 'maxwellwachira67@gmail.com';
-		$this->phonenumber = '0703519593';
+		$this->first_name = $_SESSION["fname"];
+		$this->last_name = $_SESSION["sname"];
+		$this->email =$_SESSION["email"];
+		$this->phonenumber = $_SESSION["phonenumber"];
 		$this->currency = 'KES';
-        $this->amount = 300;
-        
-		$post_xml = '<?xml version="1.0" encoding="utf-8"?>';
-		$post_xml .= '<PesapalDirectOrderInfo ';
-		$post_xml .= 'xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ';
-		$post_xml .= 'xmlns:xsd="http://www.w3.org/2001/XMLSchema" ';
-		$post_xml .= 'Currency="'.$this->currency.'" ';
-		$post_xml .= 'Amount="'.$this->amount.'" ';
-		$post_xml .= 'Description="'.$desc.'" ';
-		$post_xml .= 'Type="'.$type.'" ';
-		$post_xml .= 'Reference="'.$reference.'" ';
-		$post_xml .= 'FirstName="'.$this->first_name.'" ';
-		$post_xml .= 'LastName="'.$this->last_name.'" ';
-		$post_xml .= 'Email="'.$this->email.'" ';
-		$post_xml .= 'PhoneNumber="'.$this->phonenumber.'" ';
-		$post_xml .= 'xmlns="http://www.pesapal.com" />';
-		$post_xml = htmlentities($post_xml);
-
-		$consumer = new \OAuthConsumer($this->consumer_key, $this->consumer_secret);
-
-		// Construct the OAuth Request URL & post transaction to pesapal
-		$signature_method = new \OAuthSignatureMethod_HMAC_SHA1();
-		$iframe_src = \OAuthRequest::from_consumer_and_token($consumer, $this->token, 'GET', $this->iframelink, $this->params);
-		$iframe_src -> set_parameter('oauth_callback', $this->callback_url);
-		$iframe_src -> set_parameter('pesapal_request_data', $post_xml);
-		$iframe_src -> sign_request($signature_method, $consumer, $this->token);
-
-		// Display pesapal iframe and pass in iframe_src
-	
-		echo '<iframe src="'.$iframe_src.'" width="100%" height="800px"  scrolling="no" frameBorder="0">
-		    <p>Browser unable to load iFrame</p>
-		</iframe>';
-	}
-	public function iframeShop(){
-
-		$this->callback_url = 'https://beyond-grades/item-purchase-verification';
-		session_start();
-		if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-			session_destroy();
-			$path = Application::$app->request->getFullPath();
-		   	Application::$app->request->redirect('/sign-in?returnurl='.$path);
-		    exit;
+		if ((int)$_SESSION['membership'] == 1){
+			$this->amount = 1;
+		}else {
+			$this->amount = 1000;
 		}
-		$body = Application::$app->request->getBody();
-		$this->pesapalModel->updatePackage($body['id']);
-		$amount = base64_decode(urldecode($body['price']));
-		$price = explode(" ",$amount);
-		$this->amount = (float)end($price);
-		/*echo '<pre>';
-		var_dump($this->amount);
-		echo '</pre>';*/
-
-		$desc = 'BeyondGrades Item Purchase';
-		$type = 'MERCHANT';
-		$reference = time();
-		$this->email = $_SESSION['email'];
-		$body = $this->pesapalModel->getUserDetails($this->email);
-	
-		$this->first_name = $body['firstname'];
-		$this->last_name = $body['secondname'];
-		$this->email = $body['email'];
-		$this->phonenumber = $body['phonenumber'];
-		$this->currency = 'USD';
-
+        
+        
 		$post_xml = '<?xml version="1.0" encoding="utf-8"?>';
 		$post_xml .= '<PesapalDirectOrderInfo ';
 		$post_xml .= 'xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ';
