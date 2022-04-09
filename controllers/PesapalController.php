@@ -55,7 +55,7 @@ class PesapalController
 		$this->phonenumber = $_SESSION["phonenumber"];
 		$this->currency = 'KES';
 		if ((int)$_SESSION['membership'] == 1){
-			$this->amount = 1;
+			$this->amount = 300;
 		}else {
 			$this->amount = 1000;
 		}
