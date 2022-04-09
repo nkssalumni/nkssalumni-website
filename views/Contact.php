@@ -258,7 +258,7 @@
         <div class="container">
             <div class="justify-content-between align-item-center">
                 <h2>Get in Touch</h2>
-                <p class="lead"> Communicate to us via our below channels. feel confortable and at home.</p>
+                <p class="lead"> Communicate to us via our below channels. feel comfortable and at home.</p>
                 <br /><br /><br /><br /><br />
             </div>
         </div>
@@ -290,7 +290,7 @@
                         <h3>Contact Us</h3>
                         <p class="lead">
                         <i class="medium material-icons">phone</i>
-                        0700 555 333 </p>
+                      0726696759 </p>
                         <hr />
                         <p class="lead">
                         <i class="medium material-icons">email</i>
@@ -303,7 +303,7 @@
                         <div class= "container">
                             <div class="container justify-content-center" >
                                 <ul class="hlist">
-                                    <li class="plist"><a href="#"><span><i class="medium material-icons">phone</i></span></a></li>
+                                    <li class="plist"><a href="https://www.facebook.com/groups/297221350309250/?ref=share"><span><i class="medium material-icons">phone</i></span></a></li>
                                     <li class="plist"><a href="#"><span></span></a></li>
                                     <li class="plist"><a href="#"><span></span></a></li>
                                     <li class="plist"><a href="#"><span></span></a></li>
