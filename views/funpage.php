@@ -105,36 +105,132 @@
     <div class="text-center">
       <br />
       <h2 class="display-6"> Our Fun Moments In Pictures</h2>
-      <p> These are pictures of alumni from meetings that takes palce occasionally</p>  
+      <p> These are pictures of alumni from meetings that takes place occasionally</p>
     </div>
 
 	  <div class="container-fluid">
+	  <div>
+	  <br>
+	  <br>
+	  <br>
+	  <h1> Our First Reunion 2022 </h1>
+	  </div>
 		  <div class="row">
-		    <div class="column">
-          <img src="assets/images/cert.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940 " onclick="large('img2')" ondblclick="small('img2')" id="img2"/>
-          <img src="assets/images/malile.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" onclick="large('img3')" ondblclick="small('img3')" id="img3" />
-          <img src="assets/images/food.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"onclick="large('img4')" ondblclick="small('img4')" id="img4" />
-          <img src="assets/images/big-crew.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"onclick="large('img5')" ondblclick="small('img5')" id="img5" />
-          <img src="assets/images/large.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"onclick="large('img6')" ondblclick="small('img6')" id="img6" />
+		    <div class="column" >
+          <img src="assets/images/66.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940 " onclick="large('img2')" ondblclick="small('img2')" id="img2"/>
+          <img src="assets/images/63.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" onclick="large('img3')" ondblclick="small('img3')" id="img3" />
+          <img src="assets/images/69.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"onclick="large('img4')" ondblclick="small('img4')" id="img4" />
+          <img src="assets/images/70.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"onclick="large('img5')" ondblclick="small('img5')" id="img5" />
+          <img src="assets/images/39.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"onclick="large('img6')" ondblclick="small('img6')" id="img6" />
+          <img src="assets/images/35.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"onclick="large('img6')" ondblclick="small('img6')" id="img6a" />
+         <img src="assets/images/48.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"onclick="large('img6')" ondblclick="small('img6')" id="img6b" />
+       		   <img src="assets/images/50.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" onclick="large('img14')" ondblclick="small('img14')" id="img14b">
+       		   <img src="assets/images/79.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" onclick="large('img14')" ondblclick="small('img14')" id="img14c">
+       		   <img src="assets/images/86.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" onclick="large('img14')" ondblclick="small('img14')" id="img14d">
+
         </div>
         <div class="column">
-          <img src="assets/images/kamangu.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" onclick="large('img7')" ondblclick="small('img7')" id="img7">
-          <img src="assets/images/sch.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" onclick="large('img8')" ondblclick="small('img8')" id="img8">
-          <img src="assets/images/new.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"  onclick="large('img9')" ondblclick="small('img9')" id="img9">
-          <img src="assets/images/mm.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" onclick="large('img10')" ondblclick="small('img10')" id="img10">
+          <img src="assets/images/64.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" onclick="large('img7')" ondblclick="small('img7')" id="img7">
+          <img src="assets/images/9.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" onclick="large('img8')" ondblclick="small('img8')" id="img8">
+          <img src="assets/images/67.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"  onclick="large('img9')" ondblclick="small('img9')" id="img9">
+          <img src="assets/images/72.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" onclick="large('img10')" ondblclick="small('img10')" id="img10">
+           <img src="assets/images/77.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" onclick="large('img10')" ondblclick="small('img10')" id="img10a">
+          <img src="assets/images/41.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"onclick="large('img6')" ondblclick="small('img6')"  />
+          <img src="assets/images/38.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"onclick="large('img6')" ondblclick="small('img6')" />
+          <img src="assets/images/47.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"onclick="large('img6')" ondblclick="small('img6')" />
+          <img src="assets/images/82.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"onclick="large('img6')" ondblclick="small('img6')"  />
+          <img src="assets/images/88.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"onclick="large('img6')" ondblclick="small('img6')" />
+
         </div>
         <div class="column">
-          <img src="assets/images/funmoments.png?auto=compress&cs=tinysrgb&dpr=1&w=500" onclick="large('img1')" ondblclick="small('img1')" id="img1"/>
-          <img src="assets/images/kitambo.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" onclick="large('img11')" ondblclick="small('img11')" id="img11" />
+          <img src="assets/images/68.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" onclick="large('img1')" ondblclick="small('img1')" id="img1"/>
+          <img src="assets/images/65.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" onclick="large('img11')" ondblclick="small('img11')" id="img11" />
           <div>
-            <img src="assets/images/onyi.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" onclick="large('img12')" ondblclick="small('img12')" id="img12">						
+            <img src="assets/images/4.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" onclick="large('img12')" ondblclick="small('img12')" id="img12">
           </div>
-          <img src="assets/images/mamen.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" onclick="large('img13')" ondblclick="small('img13')" id="img13">
-          <img src="assets/images/bazu.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" onclick="large('img14')" ondblclick="small('img14')" id="img14">
+          <img src="assets/images/73.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" onclick="large('img13')" ondblclick="small('img13')" id="img13">
+          <img src="assets/images/74.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" onclick="large('img14')" ondblclick="small('img14')" id="img14">
+               <img src="assets/images/76.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" onclick="large('img14')" ondblclick="small('img14')" id="img1g">
+		            <img src="assets/images/40.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" onclick="large('img14')" ondblclick="small('img14')" >
+		            <img src="assets/images/52.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" onclick="large('img14')" ondblclick="small('img14')" >
+		            <img src="assets/images/80.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" onclick="large('img14')" ondblclick="small('img14')">
+		            <img src="assets/images/81.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" onclick="large('img14')" ondblclick="small('img14')" >
+		            <img src="assets/images/85.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" onclick="large('img14')" ondblclick="small('img14')">
+		            <img src="assets/images/87.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" onclick="large('img14')" ondblclick="small('img14')" >
+
 		    </div>
+
 		  </div>
+
 	  </div>
 
+
+	  <br>
+	  <br>
+	  <br>
+	  <h1> School Visit </h1>
+ <div class="row">
+		    <div class="column" >
+          <img src="assets/images/89.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940 " onclick="large('img2')" ondblclick="small('img2')" />
+          <img src="assets/images/90.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" onclick="large('img3')" ondblclick="small('img3')" />
+          <img src="assets/images/91.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"onclick="large('img4')" ondblclick="small('img4')" />
+          <img src="assets/images/92.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"onclick="large('img5')" ondblclick="small('img5')" />
+
+        </div>
+        <div class="column">
+          <img src="assets/images/99.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" onclick="large('img7')" ondblclick="small('img7')" >
+          <img src="assets/images/94.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" onclick="large('img8')" ondblclick="small('img8')" id="img8">
+          <img src="assets/images/95.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"  onclick="large('img9')" ondblclick="small('img9')" id="img9">
+
+        </div>
+        <div class="column">
+          <img src="assets/images/97.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" onclick="large('img1')" ondblclick="small('img1')"/>
+          <img src="assets/images/98.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" onclick="large('img11')" ondblclick="small('img11')"  />
+          <div>
+            <img src="assets/images/93.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" onclick="large('img12')" ondblclick="small('img12')">
+          </div>
+          <img src="assets/images/100.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" onclick="large('img13')" ondblclick="small('img13')" >
+
+		    </div>
+
+		  </div>
+
+	  </div>
+
+ <br>
+	  <br>
+	  <br>
+	  <h1> Committee Meeting</h1>
+	  <div class="row">
+      		    <div class="column" >
+                <img src="assets/images/105.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940 " onclick="large('img2')" ondblclick="small('img2')" />
+                <img src="assets/images/106.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" onclick="large('img3')" ondblclick="small('img3')"  />
+                <img src="assets/images/115.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" onclick="large('img3')" ondblclick="small('img3')"  />
+                <img src="assets/images/117.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" onclick="large('img3')" ondblclick="small('img3')" />
+
+              </div>
+              <div class="column">
+                <img src="assets/images/109.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" onclick="large('img7')" ondblclick="small('img7')" >
+                <img src="assets/images/107.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" onclick="large('img8')" ondblclick="small('img8')" >
+                <img src="assets/images/111.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"  onclick="large('img9')" ondblclick="small('img9')" >
+               <img src="assets/images/118.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" onclick="large('img3')" ondblclick="small('img3')" />
+
+                <img src="assets/images/116.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" onclick="large('img3')" ondblclick="small('img3')"  />
+              </div>
+              <div class="column">
+                <img src="assets/images/113.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"onclick="large('img5')" ondblclick="small('img5')"  />
+
+                <div>
+                  <img src="assets/images/114.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" onclick="large('img12')" ondblclick="small('img12')" >
+                   <img src="assets/images/110.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" onclick="large('img3')" ondblclick="small('img3')" >
+
+                </div>
+
+      		    </div>
+
+      		  </div>
+
+      	  </div>
 
     <script>  
       
@@ -159,3 +255,4 @@
   </body>
 </html>
 
+"
